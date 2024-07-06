@@ -10,7 +10,6 @@
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* ViewController.swift */; };
-		A88FA0A72C39816B00EEE69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0A52C39816B00EEE69A /* Main.storyboard */; };
 		A88FA0A92C39816C00EEE69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0A82C39816C00EEE69A /* Assets.xcassets */; };
 		A88FA0AC2C39816C00EEE69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0AA2C39816C00EEE69A /* LaunchScreen.storyboard */; };
 		A88FA0B72C39816C00EEE69A /* desafio_coraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0B62C39816C00EEE69A /* desafio_coraTests.swift */; };
@@ -40,7 +39,6 @@
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A32C39816B00EEE69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A88FA0A62C39816B00EEE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A88FA0A82C39816C00EEE69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A88FA0AB2C39816C00EEE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A88FA0AD2C39816C00EEE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				A88FA09F2C39816B00EEE69A /* AppDelegate.swift */,
 				A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */,
 				A88FA0A32C39816B00EEE69A /* ViewController.swift */,
-				A88FA0A52C39816B00EEE69A /* Main.storyboard */,
 				A88FA0A82C39816C00EEE69A /* Assets.xcassets */,
 				A88FA0AA2C39816C00EEE69A /* LaunchScreen.storyboard */,
 				A88FA0AD2C39816C00EEE69A /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				A88FA0AC2C39816C00EEE69A /* LaunchScreen.storyboard in Resources */,
 				A88FA0A92C39816C00EEE69A /* Assets.xcassets in Resources */,
-				A88FA0A72C39816B00EEE69A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A88FA0A52C39816B00EEE69A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A88FA0A62C39816B00EEE69A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A88FA0AA2C39816C00EEE69A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +435,6 @@
 				INFOPLIST_FILE = "desafio-cora/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +462,6 @@
 				INFOPLIST_FILE = "desafio-cora/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
