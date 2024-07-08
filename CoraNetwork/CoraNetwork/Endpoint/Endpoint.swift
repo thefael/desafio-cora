@@ -1,34 +1,27 @@
 import Foundation
 
 public protocol Endpoint {
-    var baseURL: String { get }
+    var baseUrl: String { get }
     var scheme: String { get }
     var path: String { get }
     var method: HTTPMethod { get }
-    var queryItems: [URLQueryItem] { get set }
+    var body: Data? { get }
+    var contentType: ContentType { get }
+    var queryItems: [URLQueryItem]? { get set }
     var url: URL? { get }
 }
 
 public extension Endpoint {
     var method: HTTPMethod { .get }
     var scheme: String { "https" }
-    var queryItems: [URLQueryItem] { [] }
+    var queryItems: [URLQueryItem]? { nil }
     var url: URL? {
         var components = URLComponents()
         components.scheme = scheme
-        components.host = baseURL
+        components.host = baseUrl
         components.path = path
         components.queryItems = queryItems
         return components.url
-    }
-    
-    mutating func addQueryItem(key: QueryItemKey, value: String?) {
-        queryItems.append(
-            .init(
-                name: key.rawValue,
-                value: value
-            )
-        )
     }
 }
 
