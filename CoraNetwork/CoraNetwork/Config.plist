@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BASE_URL</key>
+	<string>api.challenge.stage.cora.com.br/challenge</string>
+	<key>API_KEY</key>
+	<string>79b5f54918628cc7f6a900a386d14a04</string>
+</dict>
+</plist>

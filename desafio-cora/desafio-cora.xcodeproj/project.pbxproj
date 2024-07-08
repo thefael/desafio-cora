@@ -15,6 +15,8 @@
 		A88FA0B72C39816C00EEE69A /* desafio_coraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0B62C39816C00EEE69A /* desafio_coraTests.swift */; };
 		A88FA0C12C39816C00EEE69A /* desafio_coraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0C02C39816C00EEE69A /* desafio_coraUITests.swift */; };
 		A88FA0C32C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0C22C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift */; };
+		A88FA1062C39CCAF00EEE69A /* CoraNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */; };
+		A88FA1072C39CCAF00EEE69A /* CoraNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,28 @@
 			remoteGlobalIDString = A88FA09B2C39816B00EEE69A;
 			remoteInfo = "desafio-cora";
 		};
+		A88FA1032C39CC6B00EEE69A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A88FA0DD2C3992CF00EEE69A;
+			remoteInfo = CoraNetwork;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A88FA1082C39CCAF00EEE69A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A88FA1072C39CCAF00EEE69A /* CoraNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,12 +64,13 @@
 		A88FA0A32C39816B00EEE69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A88FA0A82C39816C00EEE69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A88FA0AB2C39816C00EEE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A88FA0AD2C39816C00EEE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88FA0AD2C39816C00EEE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "desafio-cora/AppConfiguration/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A88FA0B22C39816C00EEE69A /* desafio-coraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-coraTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA0B62C39816C00EEE69A /* desafio_coraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraTests.swift; sourceTree = "<group>"; };
 		A88FA0BC2C39816C00EEE69A /* desafio-coraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-coraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA0C02C39816C00EEE69A /* desafio_coraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraUITests.swift; sourceTree = "<group>"; };
 		A88FA0C22C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoraNetwork.xcodeproj; path = ../../CoraNetwork/CoraNetwork.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88FA1062C39CCAF00EEE69A /* CoraNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,7 @@
 				A88FA0B52C39816C00EEE69A /* desafio-coraTests */,
 				A88FA0BF2C39816C00EEE69A /* desafio-coraUITests */,
 				A88FA09D2C39816B00EEE69A /* Products */,
+				A88FA1052C39CCAF00EEE69A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +123,9 @@
 		A88FA09E2C39816B00EEE69A /* desafio-cora */ = {
 			isa = PBXGroup;
 			children = (
-				A88FA09F2C39816B00EEE69A /* AppDelegate.swift */,
-				A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */,
-				A88FA0A32C39816B00EEE69A /* ViewController.swift */,
-				A88FA0A82C39816C00EEE69A /* Assets.xcassets */,
-				A88FA0AA2C39816C00EEE69A /* LaunchScreen.storyboard */,
-				A88FA0AD2C39816C00EEE69A /* Info.plist */,
+				A88FA10C2C3C1A9400EEE69A /* AppConfiguration */,
+				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
+				A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */,
 			);
 			path = "desafio-cora";
 			sourceTree = "<group>";
@@ -124,6 +147,41 @@
 			path = "desafio-coraUITests";
 			sourceTree = "<group>";
 		};
+		A88FA1002C39CC6B00EEE69A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A88FA1052C39CCAF00EEE69A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A88FA10B2C3C1A7F00EEE69A /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				A88FA0A32C39816B00EEE69A /* ViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		A88FA10C2C3C1A9400EEE69A /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				A88FA0AD2C39816C00EEE69A /* Info.plist */,
+				A88FA0AA2C39816C00EEE69A /* LaunchScreen.storyboard */,
+				A88FA0A82C39816C00EEE69A /* Assets.xcassets */,
+				A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */,
+				A88FA09F2C39816B00EEE69A /* AppDelegate.swift */,
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +192,7 @@
 				A88FA0982C39816B00EEE69A /* Sources */,
 				A88FA0992C39816B00EEE69A /* Frameworks */,
 				A88FA09A2C39816B00EEE69A /* Resources */,
+				A88FA1082C39CCAF00EEE69A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +273,12 @@
 			mainGroup = A88FA0932C39816B00EEE69A;
 			productRefGroup = A88FA09D2C39816B00EEE69A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A88FA1002C39CC6B00EEE69A /* Products */;
+					ProjectRef = A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A88FA09B2C39816B00EEE69A /* desafio-cora */,
@@ -222,6 +287,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoraNetwork.framework;
+			remoteRef = A88FA1032C39CC6B00EEE69A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A88FA09A2C39816B00EEE69A /* Resources */ = {
@@ -432,7 +507,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY35DG58QL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "desafio-cora/Info.plist";
+				INFOPLIST_FILE = "desafio-cora/AppConfiguration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -460,7 +535,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY35DG58QL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "desafio-cora/Info.plist";
+				INFOPLIST_FILE = "desafio-cora/AppConfiguration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
