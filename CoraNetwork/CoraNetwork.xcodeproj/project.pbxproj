@@ -15,6 +15,7 @@
 		A88FA0F52C39B60200EEE69A /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0F42C39B60200EEE69A /* Credential.swift */; };
 		A88FA0F82C39B96F00EEE69A /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0F72C39B96F00EEE69A /* RequestManager.swift */; };
 		A88FA10A2C3C0FBE00EEE69A /* ConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1092C3C0FBE00EEE69A /* ConfigLoader.swift */; };
+		A88FA1102C3C2A7000EEE69A /* MappedHttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA10F2C3C2A7000EEE69A /* MappedHttpStatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A88FA0F42C39B60200EEE69A /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		A88FA0F72C39B96F00EEE69A /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		A88FA1092C3C0FBE00EEE69A /* ConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoader.swift; sourceTree = "<group>"; };
+		A88FA10F2C3C2A7000EEE69A /* MappedHttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappedHttpStatusCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				A88FA0EA2C39941100EEE69A /* QueryItemKey.swift */,
 				A88FA0F12C39ACF800EEE69A /* ConfigKey.swift */,
+				A88FA10F2C3C2A7000EEE69A /* MappedHttpStatusCode.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				A88FA0F52C39B60200EEE69A /* Credential.swift in Sources */,
 				A88FA0EB2C39941100EEE69A /* QueryItemKey.swift in Sources */,
 				A88FA0EE2C3996D500EEE69A /* CoraEndpoint.swift in Sources */,
+				A88FA1102C3C2A7000EEE69A /* MappedHttpStatusCode.swift in Sources */,
 				A88FA10A2C3C0FBE00EEE69A /* ConfigLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

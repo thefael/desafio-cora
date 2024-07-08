@@ -43,13 +43,13 @@ private extension RequestManager {
         }
         
         switch response.statusCode {
-        case 200:
+        case MappedHttpStatusCode.ok.rawValue:
             do {
                 return try decoder.decode(T.self, from: data)
             } catch {
                 throw ApiError.decodingError
             }
-        case 401:
+        case MappedHttpStatusCode.unauthorized.rawValue:
             throw ApiError.unauthorized
         default:
             throw ApiError.invalidResponse
