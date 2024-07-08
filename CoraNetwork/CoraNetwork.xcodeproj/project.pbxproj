@@ -11,7 +11,6 @@
 		A88FA0E82C39935700EEE69A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0E72C39935700EEE69A /* Endpoint.swift */; };
 		A88FA0EB2C39941100EEE69A /* QueryItemKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0EA2C39941100EEE69A /* QueryItemKey.swift */; };
 		A88FA0EE2C3996D500EEE69A /* CoraEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0ED2C3996D500EEE69A /* CoraEndpoint.swift */; };
-		A88FA0F02C39976600EEE69A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0EF2C39976600EEE69A /* Config.plist */; };
 		A88FA0F22C39ACF800EEE69A /* ConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0F12C39ACF800EEE69A /* ConfigKey.swift */; };
 		A88FA0F52C39B60200EEE69A /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0F42C39B60200EEE69A /* Credential.swift */; };
 		A88FA0F82C39B96F00EEE69A /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0F72C39B96F00EEE69A /* RequestManager.swift */; };
@@ -24,7 +23,6 @@
 		A88FA0E72C39935700EEE69A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A88FA0EA2C39941100EEE69A /* QueryItemKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItemKey.swift; sourceTree = "<group>"; };
 		A88FA0ED2C3996D500EEE69A /* CoraEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraEndpoint.swift; sourceTree = "<group>"; };
-		A88FA0EF2C39976600EEE69A /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		A88FA0F12C39ACF800EEE69A /* ConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigKey.swift; sourceTree = "<group>"; };
 		A88FA0F42C39B60200EEE69A /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		A88FA0F72C39B96F00EEE69A /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 				A88FA0EC2C39960000EEE69A /* Endpoint */,
 				A88FA0E92C39940300EEE69A /* Constants */,
 				A88FA0E02C3992CF00EEE69A /* CoraNetwork.h */,
-				A88FA0EF2C39976600EEE69A /* Config.plist */,
 			);
 			path = CoraNetwork;
 			sourceTree = "<group>";
@@ -176,7 +173,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88FA0F02C39976600EEE69A /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
