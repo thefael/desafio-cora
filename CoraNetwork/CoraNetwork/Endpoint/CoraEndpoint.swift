@@ -5,6 +5,7 @@ public struct CoraEndpoint: Endpoint {
     public var baseUrl: String = ConfigLoader.getConfigProperty(.baseUrl)
     public var path: String
     public var method: HTTPMethod = .get
+    public var contentType: ContentType = .applicationJson
     public var body: Data? = nil
 }
 

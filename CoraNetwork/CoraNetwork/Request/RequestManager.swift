@@ -30,8 +30,8 @@ private extension RequestManager {
     static func buildRequest(_ endpoint: Endpoint) -> URLRequest? {
         guard let url = endpoint.url else { return nil }
         var urlRequest = URLRequest(url: url)
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.addValue(ConfigLoader.getConfigProperty(.apiKey), forHTTPHeaderField: QueryItemKey.apiKey.rawValue)
+        urlRequest.addValue(endpoint.contentType.rawValue, forHTTPHeaderField: HttpHeaderField.contentType.rawValue)
+        urlRequest.addValue(ConfigLoader.getConfigProperty(.apiKey), forHTTPHeaderField: HttpHeaderField.apiKey.rawValue)
         urlRequest.httpMethod = endpoint.method.rawValue
         urlRequest.httpBody = endpoint.body
         return urlRequest
@@ -43,13 +43,13 @@ private extension RequestManager {
         }
         
         switch response.statusCode {
-        case MappedHttpStatusCode.ok.rawValue:
+        case MappedHttpStatusCode.Success.ok.rawValue:
             do {
                 return try decoder.decode(T.self, from: data)
             } catch {
                 throw ApiError.decodingError
             }
-        case MappedHttpStatusCode.unauthorized.rawValue:
+        case MappedHttpStatusCode.ClientError.unauthorized.rawValue:
             throw ApiError.unauthorized
         default:
             throw ApiError.invalidResponse

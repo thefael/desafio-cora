@@ -6,6 +6,7 @@ public protocol Endpoint {
     var path: String { get }
     var method: HTTPMethod { get }
     var body: Data? { get }
+    var contentType: ContentType { get }
     var queryItems: [URLQueryItem]? { get set }
     var url: URL? { get }
 }
@@ -21,20 +22,6 @@ public extension Endpoint {
         components.path = path
         components.queryItems = queryItems
         return components.url
-    }
-    
-    mutating func addQueryItem(key: QueryItemKey, value: String?) {
-        guard queryItems != nil else {
-            queryItems = [.init(name: key.rawValue, value: value)]
-            return
-        }
-        
-        queryItems?.append(
-            .init(
-                name: key.rawValue,
-                value: value
-            )
-        )
     }
 }
 

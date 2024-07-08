@@ -1,4 +1,9 @@
-enum MappedHttpStatusCode: Int {
-    case ok = 200
-    case unauthorized = 401
+struct MappedHttpStatusCode {
+    enum Success: Int {
+        case ok = 200
+    }
+    
+    enum ClientError: Int {
+        case unauthorized = 401
+    }
 }
