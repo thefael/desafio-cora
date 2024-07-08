@@ -31,7 +31,7 @@ private extension RequestManager {
         guard let url = endpoint.url else { return nil }
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.addValue("79b5f54918628cc7f6a900a386d14a04", forHTTPHeaderField: QueryItemKey.apiKey.rawValue)
+        urlRequest.addValue(ConfigLoader.getConfigProperty(.apiKey), forHTTPHeaderField: QueryItemKey.apiKey.rawValue)
         urlRequest.httpMethod = endpoint.method.rawValue
         urlRequest.httpBody = endpoint.body
         return urlRequest
