@@ -7,6 +7,8 @@ final public class Button: UIButton {
     private let textLabel: UILabel = .init()
     private var icon: Icon = .init()
     
+    private var viewModel: Button.ViewModel?
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setupConstraints()
@@ -15,21 +17,46 @@ final public class Button: UIButton {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-public extension Button {
+    
     func configure(usingViewModel viewModel: Button.ViewModel) {
+        self.viewModel = viewModel
         configureBaseComponent(viewModel)
         configureStantardTypeIfNeeded(viewModel)
         configureIconTypeIfNeeded(viewModel)
+        configureDisabledState()
     }
     
+    @discardableResult
+    func enable(_ isEnabled: Bool) -> Self {
+        self.isEnabled = isEnabled
+
+        if isEnabled {
+            guard let viewModel else { return self }
+            backgroundColor = viewModel.colorScheme.background.uiColor
+        }
+        else {
+            backgroundColor = Color.mediumLightGray.uiColor
+        }
+        return self
+    }
+}
+
+private extension Button {
     func configureBaseComponent(_ viewModel: Button.ViewModel) {
+        layer.cornerRadius = Size.size04
         textLabel.text = viewModel.text
         textLabel.textColor = viewModel.colorScheme.text.uiColor
         textLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        backgroundColor = viewModel.colorScheme.background.uiColor
+        configureBackgroundColor(viewModel.colorScheme.background.uiColor)
+    }
+    
+    func configureBackgroundColor(_ color: UIColor) {
+        if isEnabled {
+            backgroundColor = color
+        } else {
+            backgroundColor = Color.lightGray.uiColor
+        }
     }
     
     func configureStantardTypeIfNeeded(_ viewModel: Button.ViewModel) {
@@ -49,6 +76,10 @@ public extension Button {
             icon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
             icon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Size.size06).isActive = true
         }
+    }
+    
+    func configureDisabledState() {
+        setTitleColor(Color.white.uiColor, for: .disabled)
     }
 }
 

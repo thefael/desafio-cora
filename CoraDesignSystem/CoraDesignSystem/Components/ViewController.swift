@@ -3,6 +3,7 @@ import UIKit
 public final class ViewController: UIViewController {
     typealias Size = Token.Size
     let button: Button = .init()
+        .enable(false)
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -10,7 +11,7 @@ public final class ViewController: UIViewController {
         button.configure(
             usingViewModel: .init(
                 type: .icon(
-                    .init(name: "heart-fill", color: .accentBlue)),
+                    .init(name: .arrowRight, color: .white)),
                 text: "Cora teste",
                 colorScheme: .init(
                     background: .accentPink,
@@ -25,7 +26,7 @@ public final class ViewController: UIViewController {
         view.addSubview(button)
         
         button.heightAnchor.constraint(equalToConstant: Size.size16).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        button.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -Size.size04).isActive = true
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }

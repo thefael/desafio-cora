@@ -13,6 +13,7 @@
 		A81DD9792C3D7DF300848437 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9782C3D7DF300848437 /* Size.swift */; };
 		A81DD97B2C3D800A00848437 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97A2C3D800A00848437 /* Button.swift */; };
 		A81DD97E2C3DAF2E00848437 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97D2C3DAF2E00848437 /* Icon.swift */; };
+		A81DD9802C3DBAB100848437 /* IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97F2C3DBAB100848437 /* IconName.swift */; };
 		A88FA1222C3C351700EEE69A /* CoraDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A88FA12A2C3C363700EEE69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1292C3C363700EEE69A /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		A81DD9782C3D7DF300848437 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		A81DD97A2C3D800A00848437 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		A81DD97D2C3DAF2E00848437 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		A81DD97F2C3DBAB100848437 /* IconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconName.swift; sourceTree = "<group>"; };
 		A88FA11E2C3C351700EEE69A /* CoraDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoraDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoraDesignSystem.h; sourceTree = "<group>"; };
 		A88FA1292C3C363700EEE69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 				A81DD9762C3D7B8E00848437 /* Token.swift */,
 				A81DD9712C3D742100848437 /* Color.swift */,
 				A81DD9782C3D7DF300848437 /* Size.swift */,
+				A81DD97F2C3DBAB100848437 /* IconName.swift */,
 			);
 			path = Tokens;
 			sourceTree = "<group>";
@@ -61,7 +64,6 @@
 		A81DD97C2C3DAF2500848437 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
-				A81DD97D2C3DAF2E00848437 /* Icon.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 		A88FA1282C3C35D300EEE69A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A81DD97D2C3DAF2E00848437 /* Icon.swift */,
 				A88FA1292C3C363700EEE69A /* ViewController.swift */,
 				A81DD97A2C3D800A00848437 /* Button.swift */,
 			);
@@ -189,6 +192,7 @@
 				A81DD9792C3D7DF300848437 /* Size.swift in Sources */,
 				A81DD9722C3D742100848437 /* Color.swift in Sources */,
 				A81DD9752C3D75A100848437 /* UIColor+Extensions.swift in Sources */,
+				A81DD9802C3DBAB100848437 /* IconName.swift in Sources */,
 				A81DD9772C3D7B8E00848437 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

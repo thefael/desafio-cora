@@ -14,19 +14,19 @@ public extension Token {
         var uiColor: UIColor {
             switch self {
             case .accentPink:
-                return UIColor(hex: "f53e6d")
+                return UIColor(hex: "#FE3E6D")
             case .white:
-                return UIColor(hex: "ffffff")
+                return UIColor(hex: "#FFFFFF")
             case .accentBlue:
-                return UIColor(hex: "3294da")
+                return UIColor(hex: "#1A93DA")
             case .lightGray:
-                return UIColor(hex: "6c7075")
+                return UIColor(hex: "#F0F4F8")
             case .mediumLightGray:
-                return UIColor(hex: "3b3b3b")
+                return UIColor(hex: "#DEE4E9")
             case .mediumDarkGray:
-                return UIColor(hex: "f0f4f8")
+                return UIColor(hex: "#6B7076")
             case .darkGray:
-                return UIColor(hex: "dfe4e8")
+                return UIColor(hex: "#3B3B3B")
             }
         }
     }
