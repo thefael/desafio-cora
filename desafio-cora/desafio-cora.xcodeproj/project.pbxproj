@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81DD96D2C3D737A00848437 /* CoraDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1312C3C368900EEE69A /* CoraDesignSystem.framework */; };
+		A81DD96E2C3D737A00848437 /* CoraDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1312C3C368900EEE69A /* CoraDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* ViewController.swift */; };
@@ -41,6 +43,13 @@
 			remoteGlobalIDString = A88FA0DD2C3992CF00EEE69A;
 			remoteInfo = CoraNetwork;
 		};
+		A88FA1302C3C368900EEE69A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88FA12C2C3C368900EEE69A /* CoraDesignSystem.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A88FA11E2C3C351700EEE69A;
+			remoteInfo = CoraDesignSystem;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A81DD96E2C3D737A00848437 /* CoraDesignSystem.framework in Embed Frameworks */,
 				A88FA1072C39CCAF00EEE69A /* CoraNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -71,6 +81,7 @@
 		A88FA0C02C39816C00EEE69A /* desafio_coraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraUITests.swift; sourceTree = "<group>"; };
 		A88FA0C22C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoraNetwork.xcodeproj; path = ../../CoraNetwork/CoraNetwork.xcodeproj; sourceTree = "<group>"; };
+		A88FA12C2C3C368900EEE69A /* CoraDesignSystem.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoraDesignSystem.xcodeproj; path = ../../CoraDesignSystem/CoraDesignSystem.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81DD96D2C3D737A00848437 /* CoraDesignSystem.framework in Frameworks */,
 				A88FA1062C39CCAF00EEE69A /* CoraNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +135,7 @@
 		A88FA09E2C39816B00EEE69A /* desafio-cora */ = {
 			isa = PBXGroup;
 			children = (
+				A88FA12C2C3C368900EEE69A /* CoraDesignSystem.xcodeproj */,
 				A88FA10C2C3C1A9400EEE69A /* AppConfiguration */,
 				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
 				A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */,
@@ -180,6 +193,14 @@
 				A88FA09F2C39816B00EEE69A /* AppDelegate.swift */,
 			);
 			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		A88FA12D2C3C368900EEE69A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A88FA1312C3C368900EEE69A /* CoraDesignSystem.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +296,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = A88FA12D2C3C368900EEE69A /* Products */;
+					ProjectRef = A88FA12C2C3C368900EEE69A /* CoraDesignSystem.xcodeproj */;
+				},
+				{
 					ProductGroup = A88FA1002C39CC6B00EEE69A /* Products */;
 					ProjectRef = A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */;
 				},
@@ -294,6 +319,13 @@
 			fileType = wrapper.framework;
 			path = CoraNetwork.framework;
 			remoteRef = A88FA1032C39CC6B00EEE69A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A88FA1312C3C368900EEE69A /* CoraDesignSystem.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoraDesignSystem.framework;
+			remoteRef = A88FA1302C3C368900EEE69A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
