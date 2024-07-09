@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81DD9722C3D742100848437 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9712C3D742100848437 /* Color.swift */; };
+		A81DD9752C3D75A100848437 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9742C3D75A100848437 /* UIColor+Extensions.swift */; };
+		A81DD9772C3D7B8E00848437 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9762C3D7B8E00848437 /* Token.swift */; };
 		A88FA1222C3C351700EEE69A /* CoraDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A88FA12A2C3C363700EEE69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1292C3C363700EEE69A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A81DD9712C3D742100848437 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A81DD9742C3D75A100848437 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		A81DD9762C3D7B8E00848437 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		A88FA11E2C3C351700EEE69A /* CoraDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoraDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoraDesignSystem.h; sourceTree = "<group>"; };
+		A88FA1292C3C363700EEE69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A81DD9702C3D740F00848437 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				A81DD9762C3D7B8E00848437 /* Token.swift */,
+				A81DD9712C3D742100848437 /* Color.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		A81DD9732C3D758E00848437 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A81DD9742C3D75A100848437 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A88FA1142C3C351700EEE69A = {
 			isa = PBXGroup;
 			children = (
@@ -45,9 +70,20 @@
 		A88FA1202C3C351700EEE69A /* CoraDesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				A81DD9732C3D758E00848437 /* Extensions */,
+				A81DD9702C3D740F00848437 /* Tokens */,
+				A88FA1282C3C35D300EEE69A /* Components */,
 				A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */,
 			);
 			path = CoraDesignSystem;
+			sourceTree = "<group>";
+		};
+		A88FA1282C3C35D300EEE69A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A88FA1292C3C363700EEE69A /* ViewController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +129,7 @@
 				TargetAttributes = {
 					A88FA11D2C3C351700EEE69A = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -129,6 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88FA12A2C3C363700EEE69A /* ViewController.swift in Sources */,
+				A81DD9722C3D742100848437 /* Color.swift in Sources */,
+				A81DD9752C3D75A100848437 /* UIColor+Extensions.swift in Sources */,
+				A81DD9772C3D7B8E00848437 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +181,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -188,7 +230,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -206,6 +248,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -248,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -263,6 +306,7 @@
 		A88FA1262C3C351700EEE69A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -291,6 +335,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +344,7 @@
 		A88FA1272C3C351700EEE69A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
