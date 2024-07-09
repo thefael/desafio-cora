@@ -6,6 +6,7 @@ final public class Button: UIButton {
     
     private let textLabel: UILabel = .init()
     private var icon: Icon = .init()
+    private var action: (() -> Void)?
     
     private var viewModel: Button.ViewModel?
     
@@ -18,7 +19,7 @@ final public class Button: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(usingViewModel viewModel: Button.ViewModel) {
+    public func configure(usingViewModel viewModel: Button.ViewModel) {
         self.viewModel = viewModel
         configureBaseComponent(viewModel)
         configureStantardTypeIfNeeded(viewModel)
@@ -27,7 +28,7 @@ final public class Button: UIButton {
     }
     
     @discardableResult
-    func enable(_ isEnabled: Bool) -> Self {
+    public func enable(_ isEnabled: Bool = true) -> Self {
         self.isEnabled = isEnabled
 
         if isEnabled {
@@ -37,6 +38,13 @@ final public class Button: UIButton {
         else {
             backgroundColor = Color.mediumLightGray.uiColor
         }
+        return self
+    }
+    
+    @discardableResult
+    public func action(_ action: @escaping () -> Void) -> Self {
+        self.action = action
+        addTarget(self, action: #selector(executeAction), for: .touchUpInside)
         return self
     }
 }
@@ -81,6 +89,11 @@ private extension Button {
     func configureDisabledState() {
         setTitleColor(Color.white.uiColor, for: .disabled)
     }
+    
+    @objc
+    func executeAction() {
+        action?()
+    }
 }
 
 private extension Button {
@@ -106,11 +119,22 @@ public extension Button {
         public let type: `Type`
         public let text: String
         public let colorScheme: ColorScheme
+        
+        public init(type: Type, text: String, colorScheme: ColorScheme) {
+            self.type = type
+            self.text = text
+            self.colorScheme = colorScheme
+        }
     }
     
     struct ColorScheme {
         public let background: Color
         public let text: Color
+        
+        public init(background: Color, text: Color) {
+            self.background = background
+            self.text = text
+        }
     }
     
     enum `Type` {

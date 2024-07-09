@@ -15,7 +15,6 @@
 		A81DD97E2C3DAF2E00848437 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97D2C3DAF2E00848437 /* Icon.swift */; };
 		A81DD9802C3DBAB100848437 /* IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97F2C3DBAB100848437 /* IconName.swift */; };
 		A88FA1222C3C351700EEE69A /* CoraDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A88FA12A2C3C363700EEE69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1292C3C363700EEE69A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		A81DD97F2C3DBAB100848437 /* IconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconName.swift; sourceTree = "<group>"; };
 		A88FA11E2C3C351700EEE69A /* CoraDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoraDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoraDesignSystem.h; sourceTree = "<group>"; };
-		A88FA1292C3C363700EEE69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				A81DD97D2C3DAF2E00848437 /* Icon.swift */,
-				A88FA1292C3C363700EEE69A /* ViewController.swift */,
 				A81DD97A2C3D800A00848437 /* Button.swift */,
 			);
 			path = Components;
@@ -186,7 +183,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88FA12A2C3C363700EEE69A /* ViewController.swift in Sources */,
 				A81DD97B2C3D800A00848437 /* Button.swift in Sources */,
 				A81DD97E2C3DAF2E00848437 /* Icon.swift in Sources */,
 				A81DD9792C3D7DF300848437 /* Size.swift in Sources */,
