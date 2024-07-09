@@ -1,14 +1,33 @@
 import UIKit
 
 public extension Token {
-    struct Color {
-        let accentPink = UIColor(hex: "f53e6d")
-        let white = UIColor(hex: "ffffff")
-        let accentBlue = UIColor(hex: "3294da")
+    enum Color {
+        case accentPink
+        case white
+        case accentBlue
         
-        let lightGray = UIColor(hex: "6c7075")
-        let mediumLightGray = UIColor(hex: "3b3b3b")
-        let mediumDarkGray = UIColor(hex: "f0f4f8")
-        let darkGray = UIColor(hex: "dfe4e8")
+        case lightGray
+        case mediumLightGray
+        case mediumDarkGray
+        case darkGray
+        
+        var uiColor: UIColor {
+            switch self {
+            case .accentPink:
+                return UIColor(hex: "f53e6d")
+            case .white:
+                return UIColor(hex: "ffffff")
+            case .accentBlue:
+                return UIColor(hex: "3294da")
+            case .lightGray:
+                return UIColor(hex: "6c7075")
+            case .mediumLightGray:
+                return UIColor(hex: "3b3b3b")
+            case .mediumDarkGray:
+                return UIColor(hex: "f0f4f8")
+            case .darkGray:
+                return UIColor(hex: "dfe4e8")
+            }
+        }
     }
 }
