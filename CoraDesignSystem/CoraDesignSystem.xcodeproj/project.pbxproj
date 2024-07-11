@@ -59,13 +59,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A81DD97C2C3DAF2500848437 /* Atoms */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Atoms;
-			sourceTree = "<group>";
-		};
 		A88FA1142C3C351700EEE69A = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +78,6 @@
 		A88FA1202C3C351700EEE69A /* CoraDesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				A81DD97C2C3DAF2500848437 /* Atoms */,
 				A81DD9732C3D758E00848437 /* Extensions */,
 				A81DD9702C3D740F00848437 /* Tokens */,
 				A88FA1282C3C35D300EEE69A /* Components */,

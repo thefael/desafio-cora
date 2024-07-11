@@ -9,11 +9,16 @@ final class WelcomePresenter: WelcomePresenting {
     var viewModel: WelcomeView.ViewModel = .init(
         backgroundColor: .accentPink,
         button: .init(
-            type: .icon(.init(name: .arrowRight, color: .accentPink)),
-            text: "Entrar",
-            colorScheme: .init(background: .white, text: .accentPink)
+            type: .icon(.init(name: .arrowRight)),
+            style: .secondary,
+            text: "Entrar"
         )
     )
+    private let coordinator: WelcomeCoordinating
+    
+    init(coordinator: WelcomeCoordinating) {
+        self.coordinator = coordinator
+    }
     
     func presentLoginScreen() {
         print("present login")

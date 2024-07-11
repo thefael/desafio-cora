@@ -12,6 +12,7 @@
 		A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9882C3DD06200848437 /* WelcomeView.swift */; };
 		A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */; };
 		A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */; };
+		A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
@@ -74,6 +75,7 @@
 		A81DD9882C3DD06200848437 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFactory.swift; sourceTree = "<group>"; };
+		A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				A81DD9882C3DD06200848437 /* WelcomeView.swift */,
 				A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */,
 				A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */,
+				A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */,
 				A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */,
 				A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */,
+				A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */,
 				A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */,
 				A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */,
 				A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */,

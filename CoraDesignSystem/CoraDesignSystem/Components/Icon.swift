@@ -33,9 +33,9 @@ public extension Icon {
 public extension Icon {
     struct ViewModel {
         let name: IconName
-        let color: Color
+        var color: Color
         
-        public init(name: IconName, color: Color) {
+        public init(name: IconName, color: Color = .undefined) {
             self.name = name
             self.color = color
         }

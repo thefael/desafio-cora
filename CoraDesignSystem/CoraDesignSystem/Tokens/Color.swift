@@ -11,6 +11,8 @@ public extension Token {
         case mediumDarkGray
         case darkGray
         
+        case undefined
+        
         public var uiColor: UIColor {
             switch self {
             case .accentPink:
@@ -27,6 +29,8 @@ public extension Token {
                 return UIColor(hex: "#6B7076")
             case .darkGray:
                 return UIColor(hex: "#3B3B3B")
+            case .undefined:
+                return UIColor(hex: "#00000000")
             }
         }
     }
