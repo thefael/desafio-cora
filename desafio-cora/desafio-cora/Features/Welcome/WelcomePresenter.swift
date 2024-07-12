@@ -11,7 +11,7 @@ final class WelcomePresenter: WelcomePresenting {
         button: .init(
             type: .icon(.init(name: .arrowRight)),
             style: .secondary,
-            text: "Entrar"
+            text: "Quero fazer parte!"
         )
     )
     private let coordinator: WelcomeCoordinating

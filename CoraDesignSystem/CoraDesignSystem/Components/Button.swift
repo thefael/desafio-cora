@@ -4,11 +4,8 @@ final public class Button: UIButton {
     public typealias Size = Token.Size
     public typealias Color = Token.Color
     
-    private let textLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "Avenir", size: 16)
-        return label
-    }()
+    private let text = Text()
+        .style(.body1)
     private var icon: Icon = .init()
     private var action: (() -> Void)?
     
@@ -57,9 +54,9 @@ final public class Button: UIButton {
 private extension Button {
     func configureBaseComponent(_ viewModel: Button.ViewModel, colorScheme: Button.ColorScheme) {
         layer.cornerRadius = Size.size04
-        textLabel.text = viewModel.text
-        textLabel.textColor = colorScheme.text.uiColor
-        textLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        text.text = viewModel.text
+        text.textColor = colorScheme.text.uiColor
+        text.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         configureBackgroundColor(colorScheme.background.uiColor)
     }
@@ -84,7 +81,7 @@ private extension Button {
     func configureStantardTypeIfNeeded(_ viewModel: Button.ViewModel) {
         if case .standard = viewModel.type {
             icon.removeFromSuperview()
-            textLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+            text.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         }
     }
     
@@ -93,7 +90,7 @@ private extension Button {
             if case .undefined = iconViewModel.color {
                 iconViewModel.color = colorScheme.icon
             }
-            textLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.size06).isActive = true
+            text.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.size06).isActive = true
             
             icon.configure(usingViewModel: iconViewModel)
             icon.heightAnchor.constraint(equalToConstant: Size.size06).isActive = true
@@ -120,8 +117,8 @@ private extension Button {
     }
     
     func setupTextLabel() {
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(textLabel)
+        text.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(text)
     }
     
     func setupIcon() {
