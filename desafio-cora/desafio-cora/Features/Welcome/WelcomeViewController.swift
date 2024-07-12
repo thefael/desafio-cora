@@ -3,10 +3,10 @@ import CoraNetwork
 import CoraDesignSystem
 
 final class WelcomeViewController: UIViewController {
-    private let welcomeView: WelcomeView = {
+    private lazy var welcomeView: WelcomeView = {
         let view = WelcomeView()
         view.loginButton.action {
-            print("didTapButton")
+            self.presenter.presentLoginScreen()
         }
         return view
     }()

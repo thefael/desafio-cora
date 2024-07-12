@@ -25,6 +25,6 @@ final class WelcomePresenter: WelcomePresenting {
     }
     
     func presentLoginScreen() {
-        print("present login")
+        coordinator.open()
     }
 }
