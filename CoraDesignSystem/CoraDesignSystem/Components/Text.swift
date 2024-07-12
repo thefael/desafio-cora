@@ -1,7 +1,7 @@
 import UIKit
 
 final public class Text: UILabel {
-    typealias Style = Token.TextStyle
+    public typealias Style = Token.TextStyle
     private var textStyle: Style = .body1 {
         didSet {
             guard text != nil else { return }
@@ -24,14 +24,20 @@ final public class Text: UILabel {
     }
     
     @discardableResult
-    func style(_ style: Style) -> Self {
+    public func style(_ style: Style) -> Self {
         self.textStyle = style
         return self
     }
     
     @discardableResult
-    func bold() -> Self {
+    public func bold() -> Self {
         isBold = true
+        return self
+    }
+    
+    @discardableResult
+    public func numberOfLines(_ number: Int) -> Self {
+        numberOfLines = number
         return self
     }
 }

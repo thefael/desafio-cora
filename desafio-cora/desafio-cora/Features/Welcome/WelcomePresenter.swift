@@ -8,10 +8,14 @@ protocol WelcomePresenting {
 final class WelcomePresenter: WelcomePresenting {
     var viewModel: WelcomeView.ViewModel = .init(
         backgroundColor: .accentPink,
+        titleText: "Conta Digital PJ",
+        subtitleText: "Poderosamente Simples",
+        descriptionText: "Sua empresa livre burocracias e de taxas para gerar boletos, fazer transferências e pagamentos.",
+        textColor: .white,
         button: .init(
             type: .icon(.init(name: .arrowRight)),
             style: .primary,
-            text: "Quero fazer parte!"
+            text: "Entrar"
         )
     )
     private let coordinator: WelcomeCoordinating

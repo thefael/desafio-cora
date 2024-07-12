@@ -11,9 +11,31 @@ final class WelcomeView: UIView {
         let imageView = UIImageView(image: image)
         return imageView
     }()
+    private let titleText: Text = .init()
+        .style(.header1)
+        .bold()
+    
+    private let subtitleText: Text = .init()
+        .style(.header1)
+    
+    private let descriptionText: Text = .init()
+        .style(.body1)
+        .numberOfLines(0)
+    
+    private lazy var textStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+            titleText,
+            subtitleText,
+            descriptionText
+        ])
+        stackView.axis = .vertical
+        stackView.alignment = .leading
+        stackView.setCustomSpacing(Size.size04, after: subtitleText)
+        return stackView
+    }()
     
     let loginButton = Button()
-        .size(.small)
+        .size(.medium)
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -26,7 +48,20 @@ final class WelcomeView: UIView {
     
     func configureView(usingViewModel viewModel: ViewModel) {
         backgroundColor = viewModel.backgroundColor.uiColor
+        configureTexts(viewModel)
         loginButton.configure(usingViewModel: viewModel.button)
+    }
+}
+
+private extension WelcomeView {
+    func configureTexts(_ viewModel: ViewModel) {
+        titleText.text = viewModel.titleText
+        subtitleText.text = viewModel.subtitleText
+        descriptionText.text = viewModel.descriptionText
+        
+        titleText.textColor = viewModel.textColor.uiColor
+        subtitleText.textColor = viewModel.textColor.uiColor
+        descriptionText.textColor = viewModel.textColor.uiColor
     }
 }
 
@@ -35,6 +70,7 @@ private extension WelcomeView {
         setupBackgroundViewConstraints()
         setupImageConstraints()
         setupButtonConstraints()
+        setupTextStackViewConstraints()
     }
     
     func setupBackgroundViewConstraints() {
@@ -53,6 +89,16 @@ private extension WelcomeView {
         backgroundImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        backgroundImageView.contentMode = .scaleAspectFill
+    }
+    
+    func setupTextStackViewConstraints() {
+        textStackView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(textStackView)
+        textStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.size06).isActive = true
+        textStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Size.size06).isActive = true
+        textStackView.topAnchor.constraint(equalTo: backgroundImageView.bottomAnchor, constant: Size.size15).isActive = true
+        textStackView.bottomAnchor.constraint(greaterThanOrEqualTo: loginButton.topAnchor, constant: -Size.size08).isActive = true
     }
     
     func setupButtonConstraints() {
@@ -67,6 +113,10 @@ private extension WelcomeView {
 extension WelcomeView {
     struct ViewModel {
         let backgroundColor: Color
+        let titleText: String
+        let subtitleText: String
+        let descriptionText: String
+        let textColor: Color
         let button: Button.ViewModel
     }
 }
