@@ -2,7 +2,12 @@ import UIKit
 
 final public class Text: UILabel {
     typealias Style = Token.TextStyle
-    private var textStyle: Style = .body1
+    private var textStyle: Style = .body1 {
+        didSet {
+            guard text != nil else { return }
+            configureText()
+        }
+    }
     private var isBold = false
     override public var text: String? {
         didSet {

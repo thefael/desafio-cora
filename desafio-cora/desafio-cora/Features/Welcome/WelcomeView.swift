@@ -13,6 +13,7 @@ final class WelcomeView: UIView {
     }()
     
     let loginButton = Button()
+        .size(.small)
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -60,7 +61,6 @@ private extension WelcomeView {
         loginButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Size.size09).isActive = true
         loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.size06).isActive = true
         loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Size.size06).isActive = true
-        loginButton.heightAnchor.constraint(equalToConstant: Size.size16).isActive = true
     }
 }
 

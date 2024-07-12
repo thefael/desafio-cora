@@ -5,9 +5,10 @@ final public class Button: UIButton {
     public typealias Color = Token.Color
     
     private let text = Text()
-        .style(.body1)
+        .bold()
     private var icon: Icon = .init()
     private var action: (() -> Void)?
+    private var buttonSize: ButtonSize = .medium
     
     private var viewModel: Button.ViewModel?
     
@@ -26,6 +27,7 @@ final public class Button: UIButton {
         configureBaseComponent(viewModel, colorScheme: colorScheme)
         configureStantardTypeIfNeeded(viewModel)
         configureIconTypeIfNeeded(viewModel, colorScheme: colorScheme)
+        configureButtonSize()
         configureDisabledState()
     }
     
@@ -47,6 +49,12 @@ final public class Button: UIButton {
     public func action(_ action: @escaping () -> Void) -> Self {
         self.action = action
         addTarget(self, action: #selector(executeAction), for: .touchUpInside)
+        return self
+    }
+    
+    @discardableResult
+    public func size(_ size: ButtonSize) -> Self {
+        self.buttonSize = size
         return self
     }
 }
@@ -100,6 +108,19 @@ private extension Button {
         }
     }
     
+    func configureButtonSize() {
+        var buttonHeight: CGFloat = Size.size16
+        switch buttonSize {
+        case .medium:
+            buttonHeight = Size.size16
+            text.style(.body1)
+        case .small:
+            buttonHeight = Size.size12
+            text.style(.body2)
+        }
+        heightAnchor.constraint(equalToConstant: buttonHeight).isActive = true
+    }
+    
     func configureDisabledState() {
         setTitleColor(Color.white.uiColor, for: .disabled)
     }
@@ -141,12 +162,6 @@ public extension Button {
         }
     }
     
-    struct ColorScheme {
-        public let background: Color
-        public let text: Color
-        public let icon: Color
-    }
-    
     enum `Type` {
         case standard
         case icon(_ viewModel: Icon.ViewModel)
@@ -155,5 +170,16 @@ public extension Button {
     enum Style {
         case primary
         case secondary
+    }
+    
+    struct ColorScheme {
+        public let background: Color
+        public let text: Color
+        public let icon: Color
+    }
+    
+    enum ButtonSize {
+        case medium
+        case small
     }
 }

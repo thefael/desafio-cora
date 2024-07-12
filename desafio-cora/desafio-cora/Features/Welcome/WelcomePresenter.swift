@@ -10,7 +10,7 @@ final class WelcomePresenter: WelcomePresenting {
         backgroundColor: .accentPink,
         button: .init(
             type: .icon(.init(name: .arrowRight)),
-            style: .secondary,
+            style: .primary,
             text: "Quero fazer parte!"
         )
     )
