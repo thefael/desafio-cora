@@ -1,9 +1,9 @@
 import UIKit
 
 final public class Icon: UIView {
-    typealias Size = Token.Size
-    typealias Color = Token.Color
-    typealias IconName = Token.IconName
+    public typealias Size = Token.Size
+    public typealias Color = Token.Color
+    public typealias IconName = Token.IconName
     
     private let container: UIView = .init()
     private var imageView: UIImageView = {
@@ -33,7 +33,12 @@ public extension Icon {
 public extension Icon {
     struct ViewModel {
         let name: IconName
-        let color: Color
+        var color: Color
+        
+        public init(name: IconName, color: Color = .undefined) {
+            self.name = name
+            self.color = color
+        }
     }
 }
 

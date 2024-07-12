@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		A81DD96D2C3D737A00848437 /* CoraDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1312C3C368900EEE69A /* CoraDesignSystem.framework */; };
 		A81DD96E2C3D737A00848437 /* CoraDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1312C3C368900EEE69A /* CoraDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9882C3DD06200848437 /* WelcomeView.swift */; };
+		A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */; };
+		A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */; };
+		A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
-		A88FA0A42C39816B00EEE69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* ViewController.swift */; };
+		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
 		A88FA0A92C39816C00EEE69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0A82C39816C00EEE69A /* Assets.xcassets */; };
 		A88FA0AC2C39816C00EEE69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0AA2C39816C00EEE69A /* LaunchScreen.storyboard */; };
 		A88FA0B72C39816C00EEE69A /* desafio_coraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0B62C39816C00EEE69A /* desafio_coraTests.swift */; };
@@ -68,10 +72,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A81DD9882C3DD06200848437 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFactory.swift; sourceTree = "<group>"; };
+		A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A88FA0A32C39816B00EEE69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A88FA0A82C39816C00EEE69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A88FA0AB2C39816C00EEE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A88FA0AD2C39816C00EEE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "desafio-cora/AppConfiguration/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -111,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A81DD9872C3DD00100848437 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		A88FA0932C39816B00EEE69A = {
 			isa = PBXGroup;
 			children = (
@@ -135,9 +151,9 @@
 		A88FA09E2C39816B00EEE69A /* desafio-cora */ = {
 			isa = PBXGroup;
 			children = (
+				A81DD9872C3DD00100848437 /* Features */,
 				A88FA12C2C3C368900EEE69A /* CoraDesignSystem.xcodeproj */,
 				A88FA10C2C3C1A9400EEE69A /* AppConfiguration */,
-				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
 				A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */,
 			);
 			path = "desafio-cora";
@@ -178,7 +194,11 @@
 		A88FA10B2C3C1A7F00EEE69A /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				A88FA0A32C39816B00EEE69A /* ViewController.swift */,
+				A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */,
+				A81DD9882C3DD06200848437 /* WelcomeView.swift */,
+				A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */,
+				A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */,
+				A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -361,9 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88FA0A42C39816B00EEE69A /* ViewController.swift in Sources */,
+				A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */,
+				A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */,
 				A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */,
+				A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */,
 				A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */,
+				A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */,
+				A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

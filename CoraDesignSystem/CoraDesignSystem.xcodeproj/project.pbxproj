@@ -14,8 +14,9 @@
 		A81DD97B2C3D800A00848437 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97A2C3D800A00848437 /* Button.swift */; };
 		A81DD97E2C3DAF2E00848437 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97D2C3DAF2E00848437 /* Icon.swift */; };
 		A81DD9802C3DBAB100848437 /* IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD97F2C3DBAB100848437 /* IconName.swift */; };
+		A81DD9942C40A4E400848437 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9932C40A4E400848437 /* TextStyle.swift */; };
+		A81DD9982C40AE2B00848437 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9972C40AE2B00848437 /* Text.swift */; };
 		A88FA1222C3C351700EEE69A /* CoraDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A88FA12A2C3C363700EEE69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1292C3C363700EEE69A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +27,10 @@
 		A81DD97A2C3D800A00848437 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		A81DD97D2C3DAF2E00848437 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		A81DD97F2C3DBAB100848437 /* IconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconName.swift; sourceTree = "<group>"; };
+		A81DD9932C40A4E400848437 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		A81DD9972C40AE2B00848437 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		A88FA11E2C3C351700EEE69A /* CoraDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoraDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA1212C3C351700EEE69A /* CoraDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoraDesignSystem.h; sourceTree = "<group>"; };
-		A88FA1292C3C363700EEE69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 				A81DD9712C3D742100848437 /* Color.swift */,
 				A81DD9782C3D7DF300848437 /* Size.swift */,
 				A81DD97F2C3DBAB100848437 /* IconName.swift */,
+				A81DD9932C40A4E400848437 /* TextStyle.swift */,
 			);
 			path = Tokens;
 			sourceTree = "<group>";
@@ -59,13 +62,6 @@
 				A81DD9742C3D75A100848437 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		A81DD97C2C3DAF2500848437 /* Atoms */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Atoms;
 			sourceTree = "<group>";
 		};
 		A88FA1142C3C351700EEE69A = {
@@ -87,7 +83,6 @@
 		A88FA1202C3C351700EEE69A /* CoraDesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				A81DD97C2C3DAF2500848437 /* Atoms */,
 				A81DD9732C3D758E00848437 /* Extensions */,
 				A81DD9702C3D740F00848437 /* Tokens */,
 				A88FA1282C3C35D300EEE69A /* Components */,
@@ -100,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				A81DD97D2C3DAF2E00848437 /* Icon.swift */,
-				A88FA1292C3C363700EEE69A /* ViewController.swift */,
 				A81DD97A2C3D800A00848437 /* Button.swift */,
+				A81DD9972C40AE2B00848437 /* Text.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -186,11 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88FA12A2C3C363700EEE69A /* ViewController.swift in Sources */,
+				A81DD9942C40A4E400848437 /* TextStyle.swift in Sources */,
 				A81DD97B2C3D800A00848437 /* Button.swift in Sources */,
 				A81DD97E2C3DAF2E00848437 /* Icon.swift in Sources */,
 				A81DD9792C3D7DF300848437 /* Size.swift in Sources */,
 				A81DD9722C3D742100848437 /* Color.swift in Sources */,
+				A81DD9982C40AE2B00848437 /* Text.swift in Sources */,
 				A81DD9752C3D75A100848437 /* UIColor+Extensions.swift in Sources */,
 				A81DD9802C3DBAB100848437 /* IconName.swift in Sources */,
 				A81DD9772C3D7B8E00848437 /* Token.swift in Sources */,
