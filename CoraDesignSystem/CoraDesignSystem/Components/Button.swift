@@ -28,7 +28,6 @@ final public class Button: UIButton {
         configureStantardTypeIfNeeded(viewModel)
         configureIconTypeIfNeeded(viewModel, colorScheme: colorScheme)
         configureButtonSize()
-        configureDisabledState()
     }
     
     @discardableResult
@@ -37,10 +36,15 @@ final public class Button: UIButton {
 
         if isEnabled {
             guard let viewModel else { return self }
-            backgroundColor = (viewModel.style == .primary) ? Color.accentPink.uiColor : Color.white.uiColor
+            let colorScheme = makeColorScheme(viewModel.style)
+            backgroundColor = colorScheme.background.uiColor
+            text.textColor = colorScheme.text.uiColor
+            icon.setColor(colorScheme.icon)
         }
         else {
             backgroundColor = Color.mediumLightGray.uiColor
+            text.textColor = Color.white.uiColor
+            icon.setColor(Color.white)
         }
         return self
     }
@@ -116,10 +120,6 @@ private extension Button {
             text.style(.body2)
         }
         heightAnchor.constraint(equalToConstant: buttonHeight).isActive = true
-    }
-    
-    func configureDisabledState() {
-        setTitleColor(Color.white.uiColor, for: .disabled)
     }
     
     @objc

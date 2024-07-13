@@ -1,18 +1,25 @@
-import UIKit
 import CoraDesignSystem
+import UIKit
 
-final class LoginViewController: UIViewController {
-    private let presenter: LoginPresenting
-    let loginView = LoginView()
+protocol CpfValidationDisplay: AnyObject {
+    func display(viewModel: LoginView.ViewModel)
+    func display(hint: String)
+}
+
+final class CpfValidationViewController: UIViewController {
+    private var interactor: CpfValidationInteracting
+    let loginView: LoginView = {
+        let loginView = LoginView()
+        return loginView
+    }()
     
     override func loadView() {
-        loginView.configureView(usingViewModel: presenter.viewModel)
-        loginView.textField.delegate = self
         view = loginView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor.loadScreen()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -24,8 +31,8 @@ final class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
-    init(presenter: LoginPresenting) {
-        self.presenter = presenter
+    init(interactor: CpfValidationInteracting) {
+        self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,7 +41,21 @@ final class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: TextFieldDelegate {
+extension CpfValidationViewController: CpfValidationDisplay {
+    func display(viewModel: LoginView.ViewModel) {
+        loginView.configureView(usingViewModel: viewModel)
+        loginView.textField.delegate = self
+        loginView.button.action { [weak self] in
+            self?.interactor.validateCpf()
+        }
+    }
+    
+    func display(hint: String) {
+        loginView.textField.showHint(true, text: hint)
+    }
+}
+
+extension CpfValidationViewController: TextFieldDelegate {
     var keyBoardType: UIKeyboardType {
         .numberPad
     }
@@ -43,6 +64,8 @@ extension LoginViewController: TextFieldDelegate {
         guard let currentText = textField.text else { return true }
         let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
         let sanitizedText = updatedText.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        interactor.cpfIsValid = sanitizedText.isValidCpf
+        loginView.textField.showHint(false)
         let formattedText = sanitizedText.applyCpfMask()
         textField.text = formattedText
         return false

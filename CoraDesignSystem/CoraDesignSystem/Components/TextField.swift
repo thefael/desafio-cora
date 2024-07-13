@@ -9,16 +9,23 @@ final public class TextField: UIView {
     private let titleText = Text()
         .style(.title3)
         .bold()
-    private lazy var textField: UITextField = {
+    
+    public lazy var textField: UITextField = {
         let textField = UITextField()
             .textStyle(textFieldTextStyle)
         textField.tintColor = Token.Color.darkGray.uiColor
         return textField
     }()
+    
+    private let hintText = Text()
+        .style(.caption)
+        .isHidden(true)
+    
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             titleText,
-            textField
+            textField,
+            hintText
         ])
         stackView.axis = .vertical
         stackView.alignment = .leading
@@ -43,12 +50,22 @@ final public class TextField: UIView {
     
     public func configure(usingViewModel viewModel: ViewModel) {
         titleText.text = viewModel.title
+        hintText.text = viewModel.hint
     }
     
     @discardableResult
     override public func becomeFirstResponder() -> Bool {
         textField.keyboardType = delegate?.keyBoardType ?? .default
         return textField.becomeFirstResponder()
+    }
+    
+    @discardableResult
+    public func showHint(_ show: Bool, text: String? = nil) -> Self {
+        if let text, !text.isEmpty {
+            hintText.text = text
+        }
+        hintText.isHidden(!show)
+        return self
     }
 }
 
@@ -69,9 +86,11 @@ private extension TextField {
 extension TextField {
     public struct ViewModel {
         let title: String
+        let hint: String?
         
-        public init(title: String) {
+        public init(title: String, hint: String? = nil) {
             self.title = title
+            self.hint = hint
         }
     }
 }

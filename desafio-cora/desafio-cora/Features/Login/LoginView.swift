@@ -5,7 +5,7 @@ final class LoginView: UIView {
     typealias Size = Token.Size
     typealias Color = Token.Color
     lazy var textField = TextField()
-    let button = Button()
+    lazy var button = Button()
         .size(.small)
     
     private lazy var buttonBottomConstraint: NSLayoutConstraint = button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Size.size09)
@@ -33,8 +33,8 @@ final class LoginView: UIView {
             delay: 0,
             options: .curveEaseIn,
             animations: {
-                self.textField.setNeedsLayout()
-                self.textField.layoutIfNeeded()
+                self.button.setNeedsLayout()
+                self.button.layoutIfNeeded()
             },
             completion: nil
         )
@@ -67,5 +67,25 @@ extension LoginView {
     struct ViewModel {
         let textField: TextField.ViewModel
         let button: Button.ViewModel
+        
+        static let cpf: Self = .init(
+            textField: .init(
+                title: "Qual seu CPF?"
+            ),
+            button: .init(
+                type: .icon(.init(name: .arrowRight)),
+                style: .secondary,
+                text: "Próximo"
+            )
+        )
+        
+        static let password: Self = .init(
+            textField: .init(title: "Digite sua senha de acesso"),
+            button: .init(
+                type: .icon(.init(name: .arrowRight)),
+                style: .secondary,
+                text: "Próximo"
+            )
+        )
     }
 }

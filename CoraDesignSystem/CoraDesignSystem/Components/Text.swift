@@ -2,6 +2,7 @@ import UIKit
 
 final public class Text: UILabel {
     public typealias Style = Token.TextStyle
+    public typealias Color = Token.Color
     private var textStyle: Style = .body1 {
         didSet {
             guard text != nil else { return }
@@ -39,6 +40,12 @@ final public class Text: UILabel {
     @discardableResult
     public func numberOfLines(_ number: Int) -> Self {
         numberOfLines = number
+        return self
+    }
+    
+    @discardableResult
+    public func isHidden(_ isHidden: Bool) -> Self {
+        self.isHidden = isHidden
         return self
     }
 }

@@ -29,6 +29,12 @@ public extension Icon {
         imageView.image = image
         imageView.tintColor = viewModel.color.uiColor
     }
+    
+    @discardableResult
+    func setColor(_ color: Color) -> Self {
+        imageView.tintColor = color.uiColor
+        return self
+    }
 }
 
 public extension Icon {

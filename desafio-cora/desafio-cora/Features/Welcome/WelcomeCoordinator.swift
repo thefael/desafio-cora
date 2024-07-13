@@ -10,7 +10,7 @@ final class WelcomeCoordinator: WelcomeCoordinating {
     
     func open() {
         guard let navigationController else { return }
-        let vc = LoginFactory.make()
+        let vc = CpfValidationFactory.make(navigationController: navigationController)
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.navigationItem.title = "Login Cora"
         navigationController.pushViewController(vc, animated: true)
