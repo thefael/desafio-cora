@@ -2,9 +2,9 @@ import UIKit
 
 extension Token {
     public struct TextStyle {
-        let fontFamily: String = "Avenir"
-        let fontSize: CGFloat
-        let lineHeight: CGFloat
+        public let fontFamily: String = "Avenir"
+        public let fontSize: CGFloat
+        public let lineHeight: CGFloat
         
         public static let header1: Self = .init(fontSize: 28, lineHeight: 38)
         public static let title3: Self = .init(fontSize: 22, lineHeight: 32)

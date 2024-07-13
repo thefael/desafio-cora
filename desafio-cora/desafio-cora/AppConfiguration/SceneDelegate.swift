@@ -18,3 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
+final class StyledNavigationController: UINavigationController {
+    
+}
+

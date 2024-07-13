@@ -15,6 +15,7 @@ final public class Icon: UIView {
     public override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupConstraints()
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {

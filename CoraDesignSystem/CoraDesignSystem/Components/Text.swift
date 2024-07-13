@@ -17,6 +17,7 @@ final public class Text: UILabel {
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {

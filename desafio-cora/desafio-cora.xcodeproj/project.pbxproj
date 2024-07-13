@@ -13,6 +13,10 @@
 		A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */; };
 		A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */; };
 		A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */; };
+		A81DD99B2C41AC7200848437 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD99A2C41AC7200848437 /* LoginViewController.swift */; };
+		A81DD9A52C41AD6500848437 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9A42C41AD6500848437 /* LoginView.swift */; };
+		A8387E5F2C41BA8800663E4B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E5E2C41BA8800663E4B /* LoginPresenter.swift */; };
+		A8387E632C41BB6D00663E4B /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E622C41BB6D00663E4B /* LoginFactory.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
@@ -76,6 +80,10 @@
 		A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFactory.swift; sourceTree = "<group>"; };
 		A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
+		A81DD99A2C41AC7200848437 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A81DD9A42C41AD6500848437 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A8387E5E2C41BA8800663E4B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		A8387E622C41BB6D00663E4B /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,9 +130,21 @@
 		A81DD9872C3DD00100848437 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A81DD9992C41AC6700848437 /* Login */,
 				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		A81DD9992C41AC6700848437 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A81DD99A2C41AC7200848437 /* LoginViewController.swift */,
+				A81DD9A42C41AD6500848437 /* LoginView.swift */,
+				A8387E5E2C41BA8800663E4B /* LoginPresenter.swift */,
+				A8387E622C41BB6D00663E4B /* LoginFactory.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A88FA0932C39816B00EEE69A = {
@@ -384,7 +404,11 @@
 				A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */,
 				A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */,
 				A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */,
+				A8387E632C41BB6D00663E4B /* LoginFactory.swift in Sources */,
+				A81DD9A52C41AD6500848437 /* LoginView.swift in Sources */,
+				A8387E5F2C41BA8800663E4B /* LoginPresenter.swift in Sources */,
 				A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */,
+				A81DD99B2C41AC7200848437 /* LoginViewController.swift in Sources */,
 				A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */,
 				A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */,
 				A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */,
