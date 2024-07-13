@@ -1,4 +1,5 @@
 import Foundation
+import CoraNetwork
 
 public struct CoraEndpoint: Endpoint {
     public var queryItems: [URLQueryItem]? = nil

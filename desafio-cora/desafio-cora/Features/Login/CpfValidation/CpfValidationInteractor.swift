@@ -1,14 +1,14 @@
 import Foundation
 
 protocol CpfValidationInteracting {
-    var cpfIsValid: Bool { get set }
+    var cpfToValidate: String { get set }
     func loadScreen()
     func validateCpf()
 }
 
 final class CpfValidationInteractor: CpfValidationInteracting {
     private let presenter: CpfValidationPresenting
-    var cpfIsValid: Bool = false
+    var cpfToValidate: String = ""
     
     init(presenter: CpfValidationPresenting) {
         self.presenter = presenter
@@ -19,8 +19,8 @@ final class CpfValidationInteractor: CpfValidationInteracting {
     }
     
     func validateCpf() {
-        if cpfIsValid {
-            presenter.presentPasswordValidationScreen()
+        if cpfToValidate.isValidCpf {
+            presenter.presentPasswordValidationScreen(validCpf: cpfToValidate)
         } else {
             presenter.presentHint()
         }

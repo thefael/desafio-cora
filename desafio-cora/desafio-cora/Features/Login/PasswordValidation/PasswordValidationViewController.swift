@@ -45,8 +45,9 @@ extension PasswordValidationViewController: PasswordValidationDisplay {
         loginView.configureView(usingViewModel: viewModel)
         loginView.button.enable(false)
         loginView.textField.delegate = self
-        loginView.button.action {
-            print(#function)
+        loginView.button.action { [weak self] in
+            guard let password = self?.loginView.textField.textField.text else { return }
+            self?.interactor.login(password: password)
         }
     }
 }

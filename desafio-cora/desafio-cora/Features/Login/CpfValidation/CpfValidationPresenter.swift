@@ -2,7 +2,7 @@ import CoraDesignSystem
 
 protocol CpfValidationPresenting {
     func presentScreen()
-    func presentPasswordValidationScreen()
+    func presentPasswordValidationScreen(validCpf: String)
     func presentHint()
 }
 
@@ -20,8 +20,8 @@ extension CpfValidationPresenter: CpfValidationPresenting {
         display?.display(viewModel: .cpf)
     }
     
-    func presentPasswordValidationScreen() {
-        coordinator.openPasswordValidationScreen()
+    func presentPasswordValidationScreen(validCpf: String) {
+        coordinator.openPasswordValidationScreen(validCpf: validCpf)
     }
     
     func presentHint() {
