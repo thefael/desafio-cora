@@ -10,7 +10,7 @@ public struct Credential: Encodable {
     }
 }
 
-func toData<T: Encodable>(_ t: T) -> Data? {
+public func toData<T: Encodable>(_ t: T) -> Data? {
     try? JSONEncoder().encode(t)
 }
 

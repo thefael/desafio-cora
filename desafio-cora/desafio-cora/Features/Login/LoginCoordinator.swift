@@ -2,7 +2,7 @@ import UIKit
 
 protocol LoginCoordinating {
     func openCpfValidationScreen()
-    func openPasswordValidationScreen()
+    func openPasswordValidationScreen(validCpf: String)
 }
 
 final class LoginCoordinator: LoginCoordinating {
@@ -14,9 +14,9 @@ final class LoginCoordinator: LoginCoordinating {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func openPasswordValidationScreen() {
+    func openPasswordValidationScreen(validCpf: String) {
         guard let navigationController else { return }
-        let vc = PasswordValidationFactory.make(navigationController: navigationController)
+        let vc = PasswordValidationFactory.make(navigationController: navigationController, validCpf: validCpf)
         navigationController.pushViewController(vc, animated: true)
     }
 }

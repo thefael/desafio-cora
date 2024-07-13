@@ -64,7 +64,7 @@ extension CpfValidationViewController: TextFieldDelegate {
         guard let currentText = textField.text else { return true }
         let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
         let sanitizedText = updatedText.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
-        interactor.cpfIsValid = sanitizedText.isValidCpf
+        interactor.cpfToValidate = sanitizedText
         loginView.textField.showHint(false)
         let formattedText = sanitizedText.applyCpfMask()
         textField.text = formattedText
