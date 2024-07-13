@@ -14,7 +14,7 @@ final public class Button: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        setupConstraints()
+        addSubviews()
     }
     
     required init?(coder: NSCoder) {
@@ -28,7 +28,6 @@ final public class Button: UIButton {
         configureStantardTypeIfNeeded(viewModel)
         configureIconTypeIfNeeded(viewModel, colorScheme: colorScheme)
         configureButtonSize()
-        configureDisabledState()
     }
     
     @discardableResult
@@ -37,10 +36,15 @@ final public class Button: UIButton {
 
         if isEnabled {
             guard let viewModel else { return self }
-            backgroundColor = (viewModel.style == .primary) ? Color.accentPink.uiColor : Color.white.uiColor
+            let colorScheme = makeColorScheme(viewModel.style)
+            backgroundColor = colorScheme.background.uiColor
+            text.textColor = colorScheme.text.uiColor
+            icon.setColor(colorScheme.icon)
         }
         else {
             backgroundColor = Color.mediumLightGray.uiColor
+            text.textColor = Color.white.uiColor
+            icon.setColor(Color.white)
         }
         return self
     }
@@ -101,10 +105,7 @@ private extension Button {
             text.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.size06).isActive = true
             
             icon.configure(usingViewModel: iconViewModel)
-            icon.heightAnchor.constraint(equalToConstant: Size.size06).isActive = true
-            icon.widthAnchor.constraint(equalToConstant: Size.size06).isActive = true
-            icon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-            icon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Size.size06).isActive = true
+            setupIconConstraints()
         }
     }
     
@@ -121,10 +122,6 @@ private extension Button {
         heightAnchor.constraint(equalToConstant: buttonHeight).isActive = true
     }
     
-    func configureDisabledState() {
-        setTitleColor(Color.white.uiColor, for: .disabled)
-    }
-    
     @objc
     func executeAction() {
         action?()
@@ -132,19 +129,16 @@ private extension Button {
 }
 
 private extension Button {
-    func setupConstraints() {
-        setupTextLabel()
-        setupIcon()
-    }
-    
-    func setupTextLabel() {
-        text.translatesAutoresizingMaskIntoConstraints = false
+    func addSubviews() {
         addSubview(text)
+        addSubview(icon)
     }
     
-    func setupIcon() {
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(icon)
+    func setupIconConstraints() {
+        icon.heightAnchor.constraint(equalToConstant: Size.size06).isActive = true
+        icon.widthAnchor.constraint(equalToConstant: Size.size06).isActive = true
+        icon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        icon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Size.size06).isActive = true
     }
 }
 

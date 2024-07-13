@@ -15,6 +15,7 @@ final public class Icon: UIView {
     public override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupConstraints()
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {
@@ -27,6 +28,12 @@ public extension Icon {
         let image = UIImage(named: viewModel.name.rawValue)?.withRenderingMode(.alwaysTemplate)
         imageView.image = image
         imageView.tintColor = viewModel.color.uiColor
+    }
+    
+    @discardableResult
+    func setColor(_ color: Color) -> Self {
+        imageView.tintColor = color.uiColor
+        return self
     }
 }
 

@@ -13,6 +13,17 @@
 		A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */; };
 		A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */; };
 		A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */; };
+		A81DD9A52C41AD6500848437 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD9A42C41AD6500848437 /* LoginView.swift */; };
+		A8387E672C420EE100663E4B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E662C420EE100663E4B /* LoginCoordinator.swift */; };
+		A8387E6A2C42C76E00663E4B /* CpfValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E692C42C76E00663E4B /* CpfValidationViewController.swift */; };
+		A8387E6C2C42C7DA00663E4B /* CpfValidationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E6B2C42C7DA00663E4B /* CpfValidationFactory.swift */; };
+		A8387E6E2C42C83400663E4B /* CpfValidationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E6D2C42C83400663E4B /* CpfValidationPresenter.swift */; };
+		A8387E702C42C87C00663E4B /* CpfValidationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E6F2C42C87C00663E4B /* CpfValidationInteractor.swift */; };
+		A8387E732C42D37E00663E4B /* PasswordValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E722C42D37E00663E4B /* PasswordValidationViewController.swift */; };
+		A8387E752C42D46A00663E4B /* PasswordValidationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E742C42D46A00663E4B /* PasswordValidationPresenter.swift */; };
+		A8387E772C42D67500663E4B /* PasswordValidationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E762C42D67500663E4B /* PasswordValidationInteractor.swift */; };
+		A8387E792C42D75D00663E4B /* PasswordValidationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E782C42D75D00663E4B /* PasswordValidationFactory.swift */; };
+		A8387E7C2C42D98F00663E4B /* LoginValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E7B2C42D98F00663E4B /* LoginValidations.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
@@ -76,6 +87,17 @@
 		A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		A81DD98C2C3DFD3900848437 /* WelcomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFactory.swift; sourceTree = "<group>"; };
 		A81DD98E2C3DFE8E00848437 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
+		A81DD9A42C41AD6500848437 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A8387E662C420EE100663E4B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		A8387E692C42C76E00663E4B /* CpfValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidationViewController.swift; sourceTree = "<group>"; };
+		A8387E6B2C42C7DA00663E4B /* CpfValidationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidationFactory.swift; sourceTree = "<group>"; };
+		A8387E6D2C42C83400663E4B /* CpfValidationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidationPresenter.swift; sourceTree = "<group>"; };
+		A8387E6F2C42C87C00663E4B /* CpfValidationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidationInteractor.swift; sourceTree = "<group>"; };
+		A8387E722C42D37E00663E4B /* PasswordValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationViewController.swift; sourceTree = "<group>"; };
+		A8387E742C42D46A00663E4B /* PasswordValidationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationPresenter.swift; sourceTree = "<group>"; };
+		A8387E762C42D67500663E4B /* PasswordValidationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationInteractor.swift; sourceTree = "<group>"; };
+		A8387E782C42D75D00663E4B /* PasswordValidationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationFactory.swift; sourceTree = "<group>"; };
+		A8387E7B2C42D98F00663E4B /* LoginValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidations.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,9 +144,52 @@
 		A81DD9872C3DD00100848437 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A81DD9992C41AC6700848437 /* Login */,
 				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		A81DD9992C41AC6700848437 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A8387E7A2C42D97E00663E4B /* Extensions */,
+				A8387E712C42D26700663E4B /* PasswordValidation */,
+				A8387E682C42C71400663E4B /* CpfValidation */,
+				A81DD9A42C41AD6500848437 /* LoginView.swift */,
+				A8387E662C420EE100663E4B /* LoginCoordinator.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A8387E682C42C71400663E4B /* CpfValidation */ = {
+			isa = PBXGroup;
+			children = (
+				A8387E692C42C76E00663E4B /* CpfValidationViewController.swift */,
+				A8387E6B2C42C7DA00663E4B /* CpfValidationFactory.swift */,
+				A8387E6D2C42C83400663E4B /* CpfValidationPresenter.swift */,
+				A8387E6F2C42C87C00663E4B /* CpfValidationInteractor.swift */,
+			);
+			path = CpfValidation;
+			sourceTree = "<group>";
+		};
+		A8387E712C42D26700663E4B /* PasswordValidation */ = {
+			isa = PBXGroup;
+			children = (
+				A8387E722C42D37E00663E4B /* PasswordValidationViewController.swift */,
+				A8387E742C42D46A00663E4B /* PasswordValidationPresenter.swift */,
+				A8387E762C42D67500663E4B /* PasswordValidationInteractor.swift */,
+				A8387E782C42D75D00663E4B /* PasswordValidationFactory.swift */,
+			);
+			path = PasswordValidation;
+			sourceTree = "<group>";
+		};
+		A8387E7A2C42D97E00663E4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8387E7B2C42D98F00663E4B /* LoginValidations.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A88FA0932C39816B00EEE69A = {
@@ -381,12 +446,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8387E792C42D75D00663E4B /* PasswordValidationFactory.swift in Sources */,
 				A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */,
+				A8387E732C42D37E00663E4B /* PasswordValidationViewController.swift in Sources */,
+				A8387E6C2C42C7DA00663E4B /* CpfValidationFactory.swift in Sources */,
+				A8387E7C2C42D98F00663E4B /* LoginValidations.swift in Sources */,
 				A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */,
 				A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */,
+				A81DD9A52C41AD6500848437 /* LoginView.swift in Sources */,
+				A8387E772C42D67500663E4B /* PasswordValidationInteractor.swift in Sources */,
+				A8387E752C42D46A00663E4B /* PasswordValidationPresenter.swift in Sources */,
+				A8387E702C42C87C00663E4B /* CpfValidationInteractor.swift in Sources */,
+				A8387E672C420EE100663E4B /* LoginCoordinator.swift in Sources */,
+				A8387E6A2C42C76E00663E4B /* CpfValidationViewController.swift in Sources */,
 				A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */,
 				A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */,
 				A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */,
+				A8387E6E2C42C83400663E4B /* CpfValidationPresenter.swift in Sources */,
 				A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
