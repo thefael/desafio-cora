@@ -34,6 +34,7 @@ final class PasswordValidationInteractor: PasswordValidationInteracting {
                 var accessToken = try await service.authenticate(credential: .init(cpf: cpf, password: password))
                 accessToken.timeStamp = Date()
                 repository.store(value: accessToken, forKey: .accessToken)
+                presenter.presentExtractScreen()
             } catch {
                 print(error)
             }

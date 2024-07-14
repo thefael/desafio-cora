@@ -20,7 +20,7 @@ public class RequestManager {
     }
     
     public func execute<T: Decodable>(endpoint: Endpoint) async throws -> T {
-        var endpoint: Endpoint = await intercept(endpoint)
+        let endpoint: Endpoint = await intercept(endpoint)
         return try await request(fromEndpoint: endpoint)
     }
     

@@ -6,6 +6,7 @@ enum ExtractFactory {
         let presenter = ExtractPresenter()
         let interactor = ExtractInteractor(service: service, presenter: presenter)
         let viewController = ExtractViewController(interactor: interactor)
+        presenter.display = viewController
         
         return viewController
     }

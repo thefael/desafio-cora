@@ -2,6 +2,7 @@ import CoraDesignSystem
 
 protocol PasswordValidationPresenting {
     func presentScreen()
+    func presentExtractScreen()
 }
 
 final class PasswordValidationPresenter {
@@ -16,5 +17,9 @@ final class PasswordValidationPresenter {
 extension PasswordValidationPresenter: PasswordValidationPresenting {
     func presentScreen() {
         display?.display(viewModel: .password)
+    }
+    
+    func presentExtractScreen() {
+        coordinator.openExtractScreen()
     }
 }

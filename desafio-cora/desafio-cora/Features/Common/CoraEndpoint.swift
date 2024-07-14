@@ -18,6 +18,7 @@ extension CoraEndpoint {
     
     public static func extract() -> Self {
         .init(
+            headers: ["Cache-Control": "no-cache"],
             path: "/challenge/list"
         )
     }
