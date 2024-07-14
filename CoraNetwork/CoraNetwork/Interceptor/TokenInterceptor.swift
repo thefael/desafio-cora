@@ -14,8 +14,12 @@ final class TokenManager: Interceptor {
     
     func intercept(endpoint: Endpoint) async -> Endpoint {
         var endpoint = endpoint
-        guard let accessToken: AccessToken = repository.getValue(forKey: .accessToken), let date = accessToken.timeStamp, date.isExpired, let requestManager
-        else { return endpoint }
+        guard let accessToken: AccessToken = repository.getValue(forKey: .accessToken) else { return endpoint }
+        guard let date = accessToken.timeStamp, date.isExpired, let requestManager
+        else {
+            endpoint.headers["token"] = accessToken.token
+            return endpoint
+        }
         
         do {
             let refreshTokenEndpoint = TokenEndpoint.refreshToken(accessToken)

@@ -10,7 +10,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
         let viewController = WelcomeFactory.make(navigationController)
-//        let viewController = ExtractFactory.make()
         navigationController.pushViewController(viewController, animated: false)
         
         window.rootViewController = navigationController

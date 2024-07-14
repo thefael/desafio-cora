@@ -9,14 +9,14 @@ final class ExtractPresenter: ExtractPresenting {
     weak var display: ExtractDisplay?
     
     func present(list: ExtractList) {
-        let items: [ExtractCell.ViewModel] = list.allItems.map { _ in
+        let items: [ExtractCell.ViewModel] = [1, 2, 3, 4].map { _ in
             .init(
                 icon: .init(name: .arrowDown),
                 currency: "R$",
-                value: "",
-                label: "",
-                name: "",
-                time: "",
+                value: "30,00",
+                label: "Transferência recebida",
+                name: "Lucas Melo",
+                time: "17:32",
                 colorScheme: .init(
                     currency: .accentBlue,
                     value: .accentBlue,
