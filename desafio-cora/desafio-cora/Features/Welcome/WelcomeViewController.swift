@@ -31,7 +31,3 @@ final class WelcomeViewController: UIViewController {
     }
 }
 
-struct Access: Decodable {
-    let token: String
-}
-

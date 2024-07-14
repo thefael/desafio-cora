@@ -62,7 +62,7 @@ private extension Icon {
         container.addSubview(imageView)
         imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.heightAnchor.constraint(equalTo: heightAnchor, constant: -Size.size01).isActive = true
-        imageView.widthAnchor.constraint(equalTo: widthAnchor, constant: -Size.size01).isActive = true
+        imageView.heightAnchor.constraint(equalTo: heightAnchor, constant: -Size.size02).isActive = true
+        imageView.widthAnchor.constraint(equalTo: widthAnchor, constant: -Size.size02).isActive = true
     }
 }

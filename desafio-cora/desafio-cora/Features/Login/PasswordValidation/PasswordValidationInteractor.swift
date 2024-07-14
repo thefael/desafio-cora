@@ -10,15 +10,18 @@ final class PasswordValidationInteractor: PasswordValidationInteracting {
     private let presenter: PasswordValidationPresenting
     private let service: PasswordValidationServicing
     private let cpf: String
+    private let repository: Repository
     
     init(
         cpf: String,
         presenter: PasswordValidationPresenting,
-        service: PasswordValidationServicing
+        service: PasswordValidationServicing,
+        repository: Repository = DefaultRepository()
     ) {
         self.cpf = cpf
         self.presenter = presenter
         self.service = service
+        self.repository = repository
     }
     
     func loadScreen() {
@@ -26,10 +29,11 @@ final class PasswordValidationInteractor: PasswordValidationInteracting {
     }
     
     func login(password: String) {
-        Task {
+        Task { @MainActor in
             do {
-                let access = try await service.authenticate(credential: .init(cpf: cpf, password: password))
-                print(access.token)
+                var accessToken = try await service.authenticate(credential: .init(cpf: cpf, password: password))
+                accessToken.timeStamp = Date()
+                repository.store(value: accessToken, forKey: .accessToken)
             } catch {
                 print(error)
             }

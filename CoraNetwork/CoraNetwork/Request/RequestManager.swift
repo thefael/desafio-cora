@@ -1,8 +1,15 @@
 import Foundation
 
+public protocol Interceptor {
+    func intercept(endpoint: Endpoint) async -> Endpoint
+}
+
 public class RequestManager {
     public let urlSession: URLSession
     public let decoder: JSONDecoder
+    public lazy var interceptors: [Interceptor] = [
+        TokenManager(requestManager: self)
+    ]
     
     public init(
         urlSession: URLSession = .shared,
@@ -13,6 +20,21 @@ public class RequestManager {
     }
     
     public func execute<T: Decodable>(endpoint: Endpoint) async throws -> T {
+        var endpoint: Endpoint = await intercept(endpoint)
+        return try await request(fromEndpoint: endpoint)
+    }
+    
+    func intercept(_ endpoint: Endpoint) async -> Endpoint {
+        var endpoint = endpoint
+        if endpoint.path != "/challenge/auth" {
+            endpoint = await interceptors.reduce(endpoint) { endpoint, interceptor in
+                return await interceptor.intercept(endpoint: endpoint)
+            }
+        }
+        return endpoint
+    }
+    
+    func request<T: Decodable>(fromEndpoint endpoint: Endpoint) async throws -> T {
         guard let request = Self.buildRequest(endpoint) else {
             throw ApiError.badRequest
         }
@@ -34,7 +56,7 @@ private extension RequestManager {
         urlRequest.addValue(ConfigLoader.getConfigProperty(.apiKey), forHTTPHeaderField: HttpHeaderField.apiKey.rawValue)
         urlRequest.httpMethod = endpoint.method.rawValue
         urlRequest.httpBody = endpoint.body
-        return urlRequest
+        return addHeaders(endpoint.headers, toRequest: urlRequest)
     }
     
     func handle<T: Decodable>(data: Data, response: URLResponse) throws -> T {
@@ -54,6 +76,14 @@ private extension RequestManager {
         default:
             throw ApiError.invalidResponse
         }
+    }
+    
+    static func addHeaders(_ headers: [String: String], toRequest request: URLRequest) -> URLRequest {
+        var req = request
+        for (key, value) in headers {
+            req.addValue(value, forHTTPHeaderField: key)
+        }
+        return req
     }
 }
 

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8387EB12C4330E500663E4B /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB02C4330E500663E4B /* TokenInterceptor.swift */; };
+		A8387EB42C441A4E00663E4B /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB32C441A4E00663E4B /* Array.swift */; };
+		A8387EB62C441A6C00663E4B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB52C441A6C00663E4B /* Date.swift */; };
+		A8387EB82C441AAD00663E4B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB72C441AAD00663E4B /* Repository.swift */; };
+		A8387EBA2C441EA100663E4B /* TokenEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB92C441EA100663E4B /* TokenEndpoint.swift */; };
 		A88FA0E12C3992CF00EEE69A /* CoraNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = A88FA0E02C3992CF00EEE69A /* CoraNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A88FA0E82C39935700EEE69A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0E72C39935700EEE69A /* Endpoint.swift */; };
 		A88FA0EB2C39941100EEE69A /* HttpHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0EA2C39941100EEE69A /* HttpHeaderField.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8387EB02C4330E500663E4B /* TokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInterceptor.swift; sourceTree = "<group>"; };
+		A8387EB32C441A4E00663E4B /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		A8387EB52C441A6C00663E4B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		A8387EB72C441AAD00663E4B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		A8387EB92C441EA100663E4B /* TokenEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEndpoint.swift; sourceTree = "<group>"; };
 		A88FA0DD2C3992CF00EEE69A /* CoraNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoraNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA0E02C3992CF00EEE69A /* CoraNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoraNetwork.h; sourceTree = "<group>"; };
 		A88FA0E72C39935700EEE69A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -42,6 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8387EAF2C4328EB00663E4B /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				A8387EB02C4330E500663E4B /* TokenInterceptor.swift */,
+				A8387EB92C441EA100663E4B /* TokenEndpoint.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		A8387EB22C441A4500663E4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8387EB32C441A4E00663E4B /* Array.swift */,
+				A8387EB52C441A6C00663E4B /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A88FA0D32C3992CF00EEE69A = {
 			isa = PBXGroup;
 			children = (
@@ -61,11 +89,14 @@
 		A88FA0DF2C3992CF00EEE69A /* CoraNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				A8387EB22C441A4500663E4B /* Extensions */,
+				A8387EAF2C4328EB00663E4B /* Interceptor */,
 				A88FA0F62C39B95500EEE69A /* Request */,
 				A88FA0F32C39B5F600EEE69A /* Models */,
 				A88FA0EC2C39960000EEE69A /* Endpoint */,
 				A88FA0E92C39940300EEE69A /* Constants */,
 				A88FA0E02C3992CF00EEE69A /* CoraNetwork.h */,
+				A8387EB72C441AAD00663E4B /* Repository.swift */,
 			);
 			path = CoraNetwork;
 			sourceTree = "<group>";
@@ -187,13 +218,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A88FA0E82C39935700EEE69A /* Endpoint.swift in Sources */,
+				A8387EB42C441A4E00663E4B /* Array.swift in Sources */,
+				A8387EB12C4330E500663E4B /* TokenInterceptor.swift in Sources */,
 				A88FA0F82C39B96F00EEE69A /* RequestManager.swift in Sources */,
 				A88FA0F22C39ACF800EEE69A /* ConfigKey.swift in Sources */,
 				A88FA0F52C39B60200EEE69A /* Credential.swift in Sources */,
 				A88FA0EB2C39941100EEE69A /* HttpHeaderField.swift in Sources */,
+				A8387EBA2C441EA100663E4B /* TokenEndpoint.swift in Sources */,
 				A88FA1102C3C2A7000EEE69A /* StatusCode.swift in Sources */,
+				A8387EB62C441A6C00663E4B /* Date.swift in Sources */,
 				A88FA10A2C3C0FBE00EEE69A /* ConfigLoader.swift in Sources */,
 				A88FA1122C3C319000EEE69A /* ContentType.swift in Sources */,
+				A8387EB82C441AAD00663E4B /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
