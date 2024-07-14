@@ -2,14 +2,15 @@ import CoraDesignSystem
 import UIKit
 
 protocol ExtractDisplay: AnyObject {
-    func display(items: [ExtractCell.ViewModel])
+//    func display(items: [ExtractCell.ViewModel])
+    func display(sections: [ExtractView.ViewModel.Section])
 }
 
 final class ExtractViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     private let extractView = ExtractView()
-    private let tableViewDataSource: GenericTableViewDataSource<ExtractCell.ViewModel, ExtractCell> = {
-        let dataSource = GenericTableViewDataSource<ExtractCell.ViewModel, ExtractCell>()
+    private let tableViewDataSource: GenericTableViewDataSource<ExtractView.ViewModel.Section, ExtractCell> = {
+        let dataSource = GenericTableViewDataSource<ExtractView.ViewModel.Section, ExtractCell>()
         dataSource.configureCell = { viewModel, cell in
             cell.configure(usingViewModel: viewModel)
         }
@@ -49,10 +50,9 @@ final class ExtractViewController: UIViewController {
 }
 
 extension ExtractViewController: ExtractDisplay {
-    func display(items: [ExtractCell.ViewModel]) {
-        print(items)
+    func display(sections: [ExtractView.ViewModel.Section]) {
         DispatchQueue.main.async {
-            self.tableViewDataSource.items = items
+            self.tableViewDataSource.sections = sections
             self.extractView.tableView.reloadData()
             self.refreshControl.endRefreshing()
         }

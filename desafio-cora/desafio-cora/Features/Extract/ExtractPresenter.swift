@@ -9,22 +9,36 @@ final class ExtractPresenter: ExtractPresenting {
     weak var display: ExtractDisplay?
     
     func present(list: ExtractList) {
-        let items: [ExtractCell.ViewModel] = list.allItems.map {
+        let sections: [ExtractView.ViewModel.Section] = list.results.map {
             .init(
-                icon: makeIconViewModel($0.entry),
-                currency: "R$",
-                value: makeCurrencyValue($0.amount),
-                label: $0.description,
-                name: $0.name,
-                time: makeFormattedDate($0.dateEvent),
-                colorScheme: makeColorScheme($0.entry)
+                title: makeFormattedDate(
+                    $0.date,
+                    fromFormat: .dayMonthYear,
+                    toFormat: .weekExtenseDisplay
+                ),
+                items: $0.items.map {
+                    .init(
+                        icon: makeIconViewModel($0.entry),
+                        currency: Currency.brl.rawValue,
+                        value: makeCurrencyValue($0.amount),
+                        label: $0.label,
+                        name: $0.name,
+                        time: makeFormattedDate(
+                            $0.dateEvent,
+                            fromFormat: .full,
+                            toFormat: .hourDisplay
+                        ),
+                        colorScheme: makeColorScheme($0.entry)
+                    )
+                }
             )
         }
-        display?.display(items: items)
+        display?.display(sections: sections)
     }
 }
 
 private extension ExtractPresenter {
+    
     func makeColorScheme(_ type: ExtractList.Section.Item.Entry) -> ExtractCell.ViewModel.ColorScheme {
         switch type {
         case .credit:
@@ -49,13 +63,25 @@ private extension ExtractPresenter {
         }
     }
     
-    func makeFormattedDate(_ string: String) -> String {
+    func makeFormattedDate(_ string: String, fromFormat: DateFormat, toFormat: DateFormat) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        guard let date = formatter.date(from: string) else { return "00:00" }
+        formatter.locale = .init(identifier: "pt_BR")
+        formatter.dateFormat = fromFormat.rawValue
+        guard let date = formatter.date(from: string) else { return "–––" }
         
-        formatter.dateFormat = "HH:mm"
+        formatter.dateFormat = toFormat.rawValue
         let formattedDate = formatter.string(from: date)
         return formattedDate
     }
+}
+
+enum DateFormat: String {
+    case full = "yyyy-MM-dd'T'HH:mm:ssZ"
+    case hourDisplay = "HH:mm"
+    case weekExtenseDisplay = "EEEE, d 'de' MMMM"
+    case dayMonthYear = "yyyy-MM-dd"
+}
+
+enum Currency: String {
+    case brl = "R$"
 }

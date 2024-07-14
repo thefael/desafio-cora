@@ -31,6 +31,15 @@ private extension ExtractView {
 
 extension ExtractView {
     struct ViewModel {
-        let list: [ExtractCell.ViewModel]
+        let sections: [Section]
+        
+        struct Section: TableViewSection {
+            let title: String
+            let items: [ExtractCell.ViewModel]
+        }
+        
+        var allItems: [ExtractCell.ViewModel] {
+            self.sections.flatMap { $0.items }
+        }
     }
 }
