@@ -11,6 +11,8 @@ struct ExtractList: Decodable {
             let description: String
             let label: String
             let name: String
+            let amount: Int
+            let dateEvent: String
             let entry: Entry
             
             enum Entry: String, Decodable {
