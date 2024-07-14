@@ -26,6 +26,14 @@
 		A8387E7C2C42D98F00663E4B /* LoginValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E7B2C42D98F00663E4B /* LoginValidations.swift */; };
 		A8387E862C42F97200663E4B /* PasswordValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E852C42F97200663E4B /* PasswordValidationService.swift */; };
 		A8387E882C42F9E100663E4B /* CoraEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E872C42F9E100663E4B /* CoraEndpoint.swift */; };
+		A8387E982C43004900663E4B /* ExtractCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E972C43004900663E4B /* ExtractCell.swift */; };
+		A8387E9B2C43089F00663E4B /* ExtractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E9A2C43089F00663E4B /* ExtractView.swift */; };
+		A8387E9D2C430A4200663E4B /* ExtractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387E9C2C430A4200663E4B /* ExtractViewController.swift */; };
+		A8387EA32C4312C700663E4B /* ExtractInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EA22C4312C700663E4B /* ExtractInteractor.swift */; };
+		A8387EA52C4312F000663E4B /* ExtractService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EA42C4312F000663E4B /* ExtractService.swift */; };
+		A8387EA72C43197D00663E4B /* ExtractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EA62C43197D00663E4B /* ExtractFactory.swift */; };
+		A8387EAA2C431ABA00663E4B /* GenericTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EA92C431ABA00663E4B /* GenericTableViewDataSource.swift */; };
+		A8387EAC2C4320BA00663E4B /* ExtractPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EAB2C4320BA00663E4B /* ExtractPresenter.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
@@ -102,6 +110,14 @@
 		A8387E7B2C42D98F00663E4B /* LoginValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidations.swift; sourceTree = "<group>"; };
 		A8387E852C42F97200663E4B /* PasswordValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationService.swift; sourceTree = "<group>"; };
 		A8387E872C42F9E100663E4B /* CoraEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraEndpoint.swift; sourceTree = "<group>"; };
+		A8387E972C43004900663E4B /* ExtractCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractCell.swift; sourceTree = "<group>"; };
+		A8387E9A2C43089F00663E4B /* ExtractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractView.swift; sourceTree = "<group>"; };
+		A8387E9C2C430A4200663E4B /* ExtractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractViewController.swift; sourceTree = "<group>"; };
+		A8387EA22C4312C700663E4B /* ExtractInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractInteractor.swift; sourceTree = "<group>"; };
+		A8387EA42C4312F000663E4B /* ExtractService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractService.swift; sourceTree = "<group>"; };
+		A8387EA62C43197D00663E4B /* ExtractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractFactory.swift; sourceTree = "<group>"; };
+		A8387EA92C431ABA00663E4B /* GenericTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewDataSource.swift; sourceTree = "<group>"; };
+		A8387EAB2C4320BA00663E4B /* ExtractPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractPresenter.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +164,8 @@
 		A81DD9872C3DD00100848437 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A8387EA82C431AA800663E4B /* Common */,
+				A8387E962C43000E00663E4B /* Extract */,
 				A81DD9992C41AC6700848437 /* Login */,
 				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
 			);
@@ -180,7 +198,6 @@
 		A8387E712C42D26700663E4B /* PasswordValidation */ = {
 			isa = PBXGroup;
 			children = (
-				A8387E872C42F9E100663E4B /* CoraEndpoint.swift */,
 				A8387E722C42D37E00663E4B /* PasswordValidationViewController.swift */,
 				A8387E742C42D46A00663E4B /* PasswordValidationPresenter.swift */,
 				A8387E762C42D67500663E4B /* PasswordValidationInteractor.swift */,
@@ -196,6 +213,37 @@
 				A8387E7B2C42D98F00663E4B /* LoginValidations.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8387E962C43000E00663E4B /* Extract */ = {
+			isa = PBXGroup;
+			children = (
+				A8387EAB2C4320BA00663E4B /* ExtractPresenter.swift */,
+				A8387E992C43085700663E4B /* View */,
+				A8387EA22C4312C700663E4B /* ExtractInteractor.swift */,
+				A8387EA42C4312F000663E4B /* ExtractService.swift */,
+				A8387EA62C43197D00663E4B /* ExtractFactory.swift */,
+			);
+			path = Extract;
+			sourceTree = "<group>";
+		};
+		A8387E992C43085700663E4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8387E972C43004900663E4B /* ExtractCell.swift */,
+				A8387E9A2C43089F00663E4B /* ExtractView.swift */,
+				A8387E9C2C430A4200663E4B /* ExtractViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8387EA82C431AA800663E4B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A8387E872C42F9E100663E4B /* CoraEndpoint.swift */,
+				A8387EA92C431ABA00663E4B /* GenericTableViewDataSource.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A88FA0932C39816B00EEE69A = {
@@ -452,11 +500,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8387EA32C4312C700663E4B /* ExtractInteractor.swift in Sources */,
 				A8387E792C42D75D00663E4B /* PasswordValidationFactory.swift in Sources */,
 				A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */,
 				A8387E732C42D37E00663E4B /* PasswordValidationViewController.swift in Sources */,
 				A8387E6C2C42C7DA00663E4B /* CpfValidationFactory.swift in Sources */,
+				A8387E9B2C43089F00663E4B /* ExtractView.swift in Sources */,
+				A8387EA72C43197D00663E4B /* ExtractFactory.swift in Sources */,
 				A8387E7C2C42D98F00663E4B /* LoginValidations.swift in Sources */,
+				A8387E9D2C430A4200663E4B /* ExtractViewController.swift in Sources */,
 				A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */,
 				A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */,
 				A81DD9A52C41AD6500848437 /* LoginView.swift in Sources */,
@@ -465,13 +517,17 @@
 				A8387E702C42C87C00663E4B /* CpfValidationInteractor.swift in Sources */,
 				A8387E672C420EE100663E4B /* LoginCoordinator.swift in Sources */,
 				A8387E6A2C42C76E00663E4B /* CpfValidationViewController.swift in Sources */,
+				A8387E982C43004900663E4B /* ExtractCell.swift in Sources */,
 				A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */,
 				A8387E862C42F97200663E4B /* PasswordValidationService.swift in Sources */,
 				A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */,
 				A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */,
+				A8387EAA2C431ABA00663E4B /* GenericTableViewDataSource.swift in Sources */,
 				A8387E6E2C42C83400663E4B /* CpfValidationPresenter.swift in Sources */,
+				A8387EAC2C4320BA00663E4B /* ExtractPresenter.swift in Sources */,
 				A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */,
 				A8387E882C42F9E100663E4B /* CoraEndpoint.swift in Sources */,
+				A8387EA52C4312F000663E4B /* ExtractService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

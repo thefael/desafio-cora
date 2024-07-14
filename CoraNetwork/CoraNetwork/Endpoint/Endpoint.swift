@@ -9,6 +9,7 @@ public protocol Endpoint {
     var contentType: ContentType { get }
     var queryItems: [URLQueryItem]? { get set }
     var url: URL? { get }
+    var headers: [String: String] { get set }
 }
 
 public extension Endpoint {

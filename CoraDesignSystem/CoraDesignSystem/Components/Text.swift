@@ -48,6 +48,12 @@ final public class Text: UILabel {
         self.isHidden = isHidden
         return self
     }
+    
+    @discardableResult
+    public func setColor(_ color: Color) -> Self {
+        textColor = color.uiColor
+        return self
+    }
 }
 
 extension Text {

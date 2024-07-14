@@ -2,6 +2,7 @@ import Foundation
 import CoraNetwork
 
 public struct CoraEndpoint: Endpoint {
+    public var headers: [String : String] = [:]
     public var queryItems: [URLQueryItem]? = nil
     public var baseUrl: String = ConfigLoader.getConfigProperty(.baseUrl)
     public var path: String
@@ -13,5 +14,11 @@ public struct CoraEndpoint: Endpoint {
 extension CoraEndpoint {
     public static func auth(credential: Credential) -> Self {
         .init(path: "/challenge/auth", method: .post, body: toData(credential))
+    }
+    
+    public static func extract() -> Self {
+        .init(
+            path: "/challenge/list"
+        )
     }
 }

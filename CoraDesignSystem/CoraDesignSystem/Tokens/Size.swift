@@ -2,8 +2,8 @@ import Foundation
 
 extension Token {
     public struct Size {
-        public static let size00: CGFloat = 4
-        public static let size01: CGFloat = 8
+        public static let size01: CGFloat = 4
+        public static let size02: CGFloat = 8
         public static let size03: CGFloat = 12
         public static let size04: CGFloat = 16
         public static let size05: CGFloat = 20
