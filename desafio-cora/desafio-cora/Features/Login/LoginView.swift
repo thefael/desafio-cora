@@ -8,7 +8,13 @@ final class LoginView: UIView {
     lazy var button = Button()
         .size(.small)
     
-    private lazy var buttonBottomConstraint: NSLayoutConstraint = button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Size.size09)
+    private lazy var buttonBottomConstraint: NSLayoutConstraint = {
+        var bottomAnchor: NSLayoutYAxisAnchor = self.safeAreaLayoutGuide.bottomAnchor
+        if #available(iOS 15, *) {
+            bottomAnchor = keyboardLayoutGuide.topAnchor
+        }
+        return button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Size.size02)
+    }()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -27,17 +33,6 @@ final class LoginView: UIView {
     
     func focusOntextField() {
         textField.becomeFirstResponder()
-        buttonBottomConstraint.constant = -((UIScreen.main.bounds.height / 3) + Size.size09)
-        UIView.animate(
-            withDuration: 0.5,
-            delay: 0,
-            options: .curveEaseIn,
-            animations: {
-                self.button.setNeedsLayout()
-                self.button.layoutIfNeeded()
-            },
-            completion: nil
-        )
     }
 }
 
