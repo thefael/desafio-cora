@@ -34,6 +34,9 @@
 		A8387EA72C43197D00663E4B /* ExtractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EA62C43197D00663E4B /* ExtractFactory.swift */; };
 		A8387EAA2C431ABA00663E4B /* GenericTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EA92C431ABA00663E4B /* GenericTableViewDataSource.swift */; };
 		A8387EAC2C4320BA00663E4B /* ExtractPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EAB2C4320BA00663E4B /* ExtractPresenter.swift */; };
+		A873AA552C4460B4005B1449 /* ExtractDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA542C4460B4005B1449 /* ExtractDetailView.swift */; };
+		A873AA572C44622C005B1449 /* ExtractDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA562C44622C005B1449 /* ExtractDetailViewController.swift */; };
+		A873AA592C4477A6005B1449 /* DetailedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA582C4477A6005B1449 /* DetailedTextView.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
@@ -118,6 +121,10 @@
 		A8387EA62C43197D00663E4B /* ExtractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractFactory.swift; sourceTree = "<group>"; };
 		A8387EA92C431ABA00663E4B /* GenericTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewDataSource.swift; sourceTree = "<group>"; };
 		A8387EAB2C4320BA00663E4B /* ExtractPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractPresenter.swift; sourceTree = "<group>"; };
+		A873AA542C4460B4005B1449 /* ExtractDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailView.swift; sourceTree = "<group>"; };
+		A873AA562C44622C005B1449 /* ExtractDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailViewController.swift; sourceTree = "<group>"; };
+		A873AA582C4477A6005B1449 /* DetailedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTextView.swift; sourceTree = "<group>"; };
+		A873AA5A2C449C64005B1449 /* desafio-cora.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "desafio-cora.entitlements"; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,7 +171,7 @@
 		A81DD9872C3DD00100848437 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A8387EA82C431AA800663E4B /* Common */,
+				A873AA532C4460A6005B1449 /* ExtractDetail */,
 				A8387E962C43000E00663E4B /* Extract */,
 				A81DD9992C41AC6700848437 /* Login */,
 				A88FA10B2C3C1A7F00EEE69A /* Welcome */,
@@ -246,6 +253,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A873AA532C4460A6005B1449 /* ExtractDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A873AA542C4460B4005B1449 /* ExtractDetailView.swift */,
+				A873AA562C44622C005B1449 /* ExtractDetailViewController.swift */,
+				A873AA582C4477A6005B1449 /* DetailedTextView.swift */,
+			);
+			path = ExtractDetail;
+			sourceTree = "<group>";
+		};
 		A88FA0932C39816B00EEE69A = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +287,8 @@
 		A88FA09E2C39816B00EEE69A /* desafio-cora */ = {
 			isa = PBXGroup;
 			children = (
+				A873AA5A2C449C64005B1449 /* desafio-cora.entitlements */,
+				A8387EA82C431AA800663E4B /* Common */,
 				A81DD9872C3DD00100848437 /* Features */,
 				A88FA12C2C3C368900EEE69A /* CoraDesignSystem.xcodeproj */,
 				A88FA10C2C3C1A9400EEE69A /* AppConfiguration */,
@@ -509,6 +528,7 @@
 				A8387EA72C43197D00663E4B /* ExtractFactory.swift in Sources */,
 				A8387E7C2C42D98F00663E4B /* LoginValidations.swift in Sources */,
 				A8387E9D2C430A4200663E4B /* ExtractViewController.swift in Sources */,
+				A873AA552C4460B4005B1449 /* ExtractDetailView.swift in Sources */,
 				A81DD98B2C3DFA0200848437 /* WelcomePresenter.swift in Sources */,
 				A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */,
 				A81DD9A52C41AD6500848437 /* LoginView.swift in Sources */,
@@ -522,11 +542,13 @@
 				A8387E862C42F97200663E4B /* PasswordValidationService.swift in Sources */,
 				A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */,
 				A81DD9892C3DD06200848437 /* WelcomeView.swift in Sources */,
+				A873AA572C44622C005B1449 /* ExtractDetailViewController.swift in Sources */,
 				A8387EAA2C431ABA00663E4B /* GenericTableViewDataSource.swift in Sources */,
 				A8387E6E2C42C83400663E4B /* CpfValidationPresenter.swift in Sources */,
 				A8387EAC2C4320BA00663E4B /* ExtractPresenter.swift in Sources */,
 				A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */,
 				A8387E882C42F9E100663E4B /* CoraEndpoint.swift in Sources */,
+				A873AA592C4477A6005B1449 /* DetailedTextView.swift in Sources */,
 				A8387EA52C4312F000663E4B /* ExtractService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "desafio-cora/desafio-cora.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY35DG58QL;
@@ -727,6 +750,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "desafio-cora/desafio-cora.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY35DG58QL;

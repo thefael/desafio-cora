@@ -7,16 +7,23 @@ public protocol Interceptor {
 public class RequestManager {
     public let urlSession: URLSession
     public let decoder: JSONDecoder
-    public lazy var interceptors: [Interceptor] = [
-        TokenManager(requestManager: self)
-    ]
+    public let interceptors: [Interceptor]
+    
+    public static var `default`: RequestManager = {
+        let interceptor = TokenInterceptor()
+        let requestManager = RequestManager(interceptors: [interceptor])
+        interceptor.requestManager = requestManager
+        return requestManager
+    }()
     
     public init(
         urlSession: URLSession = .shared,
-        decoder: JSONDecoder = .init()
+        decoder: JSONDecoder = .init(),
+        interceptors: [Interceptor] = []
     ) {
         self.urlSession = urlSession
         self.decoder = decoder
+        self.interceptors = interceptors
     }
     
     public func execute<T: Decodable>(endpoint: Endpoint) async throws -> T {
@@ -26,10 +33,8 @@ public class RequestManager {
     
     func intercept(_ endpoint: Endpoint) async -> Endpoint {
         var endpoint = endpoint
-        if endpoint.path != "/challenge/auth" {
-            endpoint = await interceptors.reduce(endpoint) { endpoint, interceptor in
-                return await interceptor.intercept(endpoint: endpoint)
-            }
+        endpoint = await interceptors.reduce(endpoint) { endpoint, interceptor in
+            return await interceptor.intercept(endpoint: endpoint)
         }
         return endpoint
     }
@@ -38,13 +43,8 @@ public class RequestManager {
         guard let request = Self.buildRequest(endpoint) else {
             throw ApiError.badRequest
         }
-        
-        do {
-            let (data, response) = try await urlSession.data(for: request)
-            return try handle(data: data, response: response)
-        } catch {
-            throw error
-        }
+        let (data, response) = try await urlSession.data(for: request)
+        return try handle(data: data, response: response)
     }
 }
     

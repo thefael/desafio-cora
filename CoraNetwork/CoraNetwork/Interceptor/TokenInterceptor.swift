@@ -1,6 +1,6 @@
 import Foundation
 
-final class TokenManager: Interceptor {
+final class TokenInterceptor: Interceptor {
     private let repository: Repository
     weak var requestManager: RequestManager?
     

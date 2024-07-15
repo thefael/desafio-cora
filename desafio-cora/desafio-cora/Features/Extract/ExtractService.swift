@@ -34,7 +34,7 @@ protocol ExtractServicing {
 }
 
 final class ExtractService: ExtractServicing {
-    let requestManager = RequestManager()
+    let requestManager: RequestManager = .default
     
     func getList() async throws -> ExtractList {
         try await requestManager.execute(endpoint: CoraEndpoint.extract())
