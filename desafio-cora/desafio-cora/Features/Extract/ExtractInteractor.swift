@@ -29,6 +29,6 @@ final class ExtractInteractor: ExtractInteracting {
     
     func didTapCell(atIndexPath indexPath: IndexPath) {
         guard let list, let item = list.results[safe: indexPath.section]?.items[safe: indexPath.row] else { return }
-        presenter.presentDetail(itemId: item.id)
+        presenter.presentDetail(itemId: item.id, entry: item.entry)
     }
 }

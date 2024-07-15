@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 protocol ExtractCoordinating {
-    func openDetailScreen(forId id: String)
+    func openDetailScreen(forId id: String, entry: ExtractList.Section.Item.Entry)
 }
 
 final class ExtractCoordinator: ExtractCoordinating {
@@ -12,8 +12,8 @@ final class ExtractCoordinator: ExtractCoordinating {
         self.navigationController = navigationController
     }
     
-    func openDetailScreen(forId id: String) {
-        let viewController = ExtractDetailFactory.make(navigationController: navigationController, id: id)
+    func openDetailScreen(forId id: String, entry: ExtractList.Section.Item.Entry) {
+        let viewController = ExtractDetailFactory.make(navigationController: navigationController, id: id, entry: entry)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

@@ -3,7 +3,7 @@ import UIKit
 
 protocol ExtractPresenting {
     func present(list: ExtractList)
-    func presentDetail(itemId: String)
+    func presentDetail(itemId: String, entry: ExtractList.Section.Item.Entry)
 }
 
 final class ExtractPresenter: ExtractPresenting {
@@ -42,8 +42,8 @@ final class ExtractPresenter: ExtractPresenting {
         display?.display(sections: sections)
     }
     
-    func presentDetail(itemId: String) {
-        coordinator.openDetailScreen(forId: itemId)
+    func presentDetail(itemId: String, entry: ExtractList.Section.Item.Entry) {
+        coordinator.openDetailScreen(forId: itemId, entry: entry)
     }
 }
 
