@@ -43,6 +43,11 @@
 		A873AA622C44B2BE005B1449 /* ExtractDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA612C44B2BE005B1449 /* ExtractDetailFactory.swift */; };
 		A873AA652C44B358005B1449 /* ExtractDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA642C44B358005B1449 /* ExtractDetailPresenter.swift */; };
 		A873AA672C44C40F005B1449 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA662C44C40F005B1449 /* Collection+Extensions.swift */; };
+		A873AA7A2C4551EE005B1449 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA792C4551EE005B1449 /* Localizable.swift */; };
+		A873AA7E2C45534A005B1449 /* WelcomeLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA7D2C45534A005B1449 /* WelcomeLocalizedStrings.swift */; };
+		A873AA812C4554DD005B1449 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A873AA802C4554DD005B1449 /* Localizable.strings */; };
+		A873AA832C456CB6005B1449 /* LoginLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA822C456CB6005B1449 /* LoginLocalizedStrings.swift */; };
+		A873AA852C457C80005B1449 /* ExtractDetailLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA842C457C80005B1449 /* ExtractDetailLocalizedStrings.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
@@ -137,6 +142,11 @@
 		A873AA612C44B2BE005B1449 /* ExtractDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailFactory.swift; sourceTree = "<group>"; };
 		A873AA642C44B358005B1449 /* ExtractDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailPresenter.swift; sourceTree = "<group>"; };
 		A873AA662C44C40F005B1449 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		A873AA792C4551EE005B1449 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		A873AA7D2C45534A005B1449 /* WelcomeLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLocalizedStrings.swift; sourceTree = "<group>"; };
+		A873AA802C4554DD005B1449 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		A873AA822C456CB6005B1449 /* LoginLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLocalizedStrings.swift; sourceTree = "<group>"; };
+		A873AA842C457C80005B1449 /* ExtractDetailLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailLocalizedStrings.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +209,7 @@
 				A8387E682C42C71400663E4B /* CpfValidation */,
 				A81DD9A42C41AD6500848437 /* LoginView.swift */,
 				A8387E662C420EE100663E4B /* LoginCoordinator.swift */,
+				A873AA822C456CB6005B1449 /* LoginLocalizedStrings.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -260,6 +271,7 @@
 		A8387EA82C431AA800663E4B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A873AA782C4551DE005B1449 /* Localizable */,
 				A8387E872C42F9E100663E4B /* CoraEndpoint.swift */,
 				A8387EA92C431ABA00663E4B /* GenericTableViewDataSource.swift */,
 				A873AA662C44C40F005B1449 /* Collection+Extensions.swift */,
@@ -275,6 +287,7 @@
 				A873AA5D2C449F9B005B1449 /* ExtractDetailService.swift */,
 				A873AA612C44B2BE005B1449 /* ExtractDetailFactory.swift */,
 				A873AA642C44B358005B1449 /* ExtractDetailPresenter.swift */,
+				A873AA842C457C80005B1449 /* ExtractDetailLocalizedStrings.swift */,
 			);
 			path = ExtractDetail;
 			sourceTree = "<group>";
@@ -287,6 +300,15 @@
 				A873AA542C4460B4005B1449 /* ExtractDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A873AA782C4551DE005B1449 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				A873AA802C4554DD005B1449 /* Localizable.strings */,
+				A873AA792C4551EE005B1449 /* Localizable.swift */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		A88FA0932C39816B00EEE69A = {
@@ -358,6 +380,7 @@
 		A88FA10B2C3C1A7F00EEE69A /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				A873AA7D2C45534A005B1449 /* WelcomeLocalizedStrings.swift */,
 				A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */,
 				A81DD9882C3DD06200848437 /* WelcomeView.swift */,
 				A81DD98A2C3DFA0200848437 /* WelcomePresenter.swift */,
@@ -469,11 +492,12 @@
 			};
 			buildConfigurationList = A88FA0972C39816B00EEE69A /* Build configuration list for PBXProject "desafio-cora" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = A88FA0932C39816B00EEE69A;
 			productRefGroup = A88FA09D2C39816B00EEE69A /* Products */;
@@ -519,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A873AA812C4554DD005B1449 /* Localizable.strings in Resources */,
 				A88FA0AC2C39816C00EEE69A /* LaunchScreen.storyboard in Resources */,
 				A88FA0A92C39816C00EEE69A /* Assets.xcassets in Resources */,
 			);
@@ -553,6 +578,7 @@
 				A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */,
 				A8387E732C42D37E00663E4B /* PasswordValidationViewController.swift in Sources */,
 				A8387E6C2C42C7DA00663E4B /* CpfValidationFactory.swift in Sources */,
+				A873AA832C456CB6005B1449 /* LoginLocalizedStrings.swift in Sources */,
 				A8387E9B2C43089F00663E4B /* ExtractView.swift in Sources */,
 				A8387EA72C43197D00663E4B /* ExtractFactory.swift in Sources */,
 				A8387E7C2C42D98F00663E4B /* LoginValidations.swift in Sources */,
@@ -565,6 +591,7 @@
 				A8387E752C42D46A00663E4B /* PasswordValidationPresenter.swift in Sources */,
 				A873AA622C44B2BE005B1449 /* ExtractDetailFactory.swift in Sources */,
 				A873AA5E2C449F9B005B1449 /* ExtractDetailService.swift in Sources */,
+				A873AA7E2C45534A005B1449 /* WelcomeLocalizedStrings.swift in Sources */,
 				A8387E702C42C87C00663E4B /* CpfValidationInteractor.swift in Sources */,
 				A8387E672C420EE100663E4B /* LoginCoordinator.swift in Sources */,
 				A8387E6A2C42C76E00663E4B /* CpfValidationViewController.swift in Sources */,
@@ -576,7 +603,9 @@
 				A873AA572C44622C005B1449 /* ExtractDetailViewController.swift in Sources */,
 				A8387EAA2C431ABA00663E4B /* GenericTableViewDataSource.swift in Sources */,
 				A8387E6E2C42C83400663E4B /* CpfValidationPresenter.swift in Sources */,
+				A873AA852C457C80005B1449 /* ExtractDetailLocalizedStrings.swift in Sources */,
 				A873AA602C44B1B7005B1449 /* ExtractCoordinator.swift in Sources */,
+				A873AA7A2C4551EE005B1449 /* Localizable.swift in Sources */,
 				A8387EAC2C4320BA00663E4B /* ExtractPresenter.swift in Sources */,
 				A81DD98D2C3DFD3900848437 /* WelcomeFactory.swift in Sources */,
 				A8387E882C42F9E100663E4B /* CoraEndpoint.swift in Sources */,

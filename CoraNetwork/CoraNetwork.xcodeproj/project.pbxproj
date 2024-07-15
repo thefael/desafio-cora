@@ -186,11 +186,12 @@
 			};
 			buildConfigurationList = A88FA0D72C3992CF00EEE69A /* Build configuration list for PBXProject "CoraNetwork" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = A88FA0D32C3992CF00EEE69A;
 			productRefGroup = A88FA0DE2C3992CF00EEE69A /* Products */;

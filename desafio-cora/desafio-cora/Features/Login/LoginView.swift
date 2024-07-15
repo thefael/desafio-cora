@@ -70,21 +70,21 @@ extension LoginView {
         
         static let cpf: Self = .init(
             textField: .init(
-                title: "Qual seu CPF?"
+                title: LoginLocalizedStrings.cpfTextFieldTitle.localized
             ),
             button: .init(
                 type: .icon(.init(name: .arrowRight)),
                 style: .secondary,
-                text: "Próximo"
+                text: LoginLocalizedStrings.loginButtonText.localized
             )
         )
         
         static let password: Self = .init(
-            textField: .init(title: "Digite sua senha de acesso"),
+            textField: .init(title: LoginLocalizedStrings.passwordTextFieldTitle.localized),
             button: .init(
                 type: .icon(.init(name: .arrowRight)),
                 style: .secondary,
-                text: "Próximo"
+                text: LoginLocalizedStrings.loginButtonText.localized
             )
         )
     }
