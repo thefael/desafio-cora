@@ -8,6 +8,7 @@ struct ExtractList: Decodable {
         let date: String
         
         struct Item: Decodable {
+            let id: String
             let description: String
             let label: String
             let name: String
@@ -34,7 +35,7 @@ protocol ExtractServicing {
 }
 
 final class ExtractService: ExtractServicing {
-    let requestManager = RequestManager()
+    let requestManager: RequestManager = .default
     
     func getList() async throws -> ExtractList {
         try await requestManager.execute(endpoint: CoraEndpoint.extract())

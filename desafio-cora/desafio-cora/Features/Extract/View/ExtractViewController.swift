@@ -2,7 +2,6 @@ import CoraDesignSystem
 import UIKit
 
 protocol ExtractDisplay: AnyObject {
-//    func display(items: [ExtractCell.ViewModel])
     func display(sections: [ExtractView.ViewModel.Section])
 }
 
@@ -30,6 +29,7 @@ final class ExtractViewController: UIViewController {
     
     override func loadView() {
         extractView.tableView.dataSource = tableViewDataSource
+        extractView.tableView.delegate = self
         view = extractView
     }
     
@@ -46,6 +46,12 @@ final class ExtractViewController: UIViewController {
     @objc
     func refresh() {
         interactor.loadData()
+    }
+}
+
+extension ExtractViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor.didTapCell(atIndexPath: indexPath)
     }
 }
 

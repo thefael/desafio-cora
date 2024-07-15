@@ -3,10 +3,16 @@ import UIKit
 
 protocol ExtractPresenting {
     func present(list: ExtractList)
+    func presentDetail(itemId: String)
 }
 
 final class ExtractPresenter: ExtractPresenting {
+    private let coordinator: ExtractCoordinating
     weak var display: ExtractDisplay?
+    
+    init(coordinator: ExtractCoordinating) {
+        self.coordinator = coordinator
+    }
     
     func present(list: ExtractList) {
         let sections: [ExtractView.ViewModel.Section] = list.results.map {
@@ -34,6 +40,10 @@ final class ExtractPresenter: ExtractPresenting {
             )
         }
         display?.display(sections: sections)
+    }
+    
+    func presentDetail(itemId: String) {
+        coordinator.openDetailScreen(forId: itemId)
     }
 }
 
@@ -80,6 +90,7 @@ enum DateFormat: String {
     case hourDisplay = "HH:mm"
     case weekExtenseDisplay = "EEEE, d 'de' MMMM"
     case dayMonthYear = "yyyy-MM-dd"
+    case weekDayDMY = "EEEE - dd/MM/yyyy"
 }
 
 enum Currency: String {

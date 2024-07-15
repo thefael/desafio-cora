@@ -18,5 +18,6 @@ extension Token {
         public static let size14: CGFloat = 56
         public static let size15: CGFloat = 60
         public static let size16: CGFloat = 64
+        public static let size20: CGFloat = 80
     }
 }
