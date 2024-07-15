@@ -2,14 +2,18 @@ import Foundation
 
 final class TokenInterceptor: Interceptor {
     private let repository: Repository
-    weak var requestManager: RequestManager?
+    private let timeStamp: (() -> Date)?
+    weak var requestManager: InterceptedRequestManaging?
+    var refreshTokenEndpoint: (AccessToken) -> Endpoint = TokenEndpoint.refreshToken
     
     init(
-        requestManager: RequestManager? = nil,
-        repository: Repository = DefaultRepository()
+        repository: Repository = DefaultRepository(),
+        timeStamp: (() -> Date)? = Date.init,
+        requestManager: InterceptedRequestManaging? = nil
     ) {
-        self.requestManager = requestManager
         self.repository = repository
+        self.timeStamp = timeStamp
+        self.requestManager = requestManager
     }
     
     func intercept(endpoint: Endpoint) async throws -> Endpoint {
@@ -21,9 +25,9 @@ final class TokenInterceptor: Interceptor {
             return endpoint
         }
         
-        let refreshTokenEndpoint = TokenEndpoint.refreshToken(accessToken)
+        let refreshTokenEndpoint = refreshTokenEndpoint(accessToken)
         var refreshToken: AccessToken = try await requestManager.request(fromEndpoint: refreshTokenEndpoint)
-        refreshToken.timeStamp = Date()
+        refreshToken.timeStamp = timeStamp?()
         repository.store(value: refreshToken, forKey: .accessToken)
         endpoint.headers["token"] = refreshToken.token
         

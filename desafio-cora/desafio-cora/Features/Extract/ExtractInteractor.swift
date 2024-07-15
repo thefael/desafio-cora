@@ -18,8 +18,8 @@ final class ExtractInteractor: ExtractInteracting {
     func loadData() {
         Task { @MainActor in
             do {
-                list = try await service.getList()
-                guard let list else { return }
+                let list = try await service.getList()
+                self.list = list
                 presenter.present(list: list)
             } catch {
                 print(error)

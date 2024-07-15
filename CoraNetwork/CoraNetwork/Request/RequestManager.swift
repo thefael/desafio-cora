@@ -1,10 +1,14 @@
 import Foundation
 
-public protocol Interceptor {
-    func intercept(endpoint: Endpoint) async throws -> Endpoint
+public protocol RequestManaging {
+    func execute<T: Decodable>(endpoint: Endpoint) async throws -> T
 }
 
-public class RequestManager {
+protocol InterceptedRequestManaging: AnyObject {
+    func request<T: Decodable>(fromEndpoint endpoint: Endpoint) async throws -> T
+}
+
+public class RequestManager: RequestManaging, InterceptedRequestManaging {
     public let urlSession: URLSession
     public let decoder: JSONDecoder
     public let interceptors: [Interceptor]
