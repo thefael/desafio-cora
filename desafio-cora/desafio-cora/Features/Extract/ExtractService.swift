@@ -8,6 +8,7 @@ struct ExtractList: Decodable {
         let date: String
         
         struct Item: Decodable {
+            let id: String
             let description: String
             let label: String
             let name: String

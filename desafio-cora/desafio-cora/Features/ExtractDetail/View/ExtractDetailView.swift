@@ -20,8 +20,6 @@ final class ExtractDetailView: UIView {
     private let senderView = DetailedTextView()
     private let recipientView = DetailedTextView()
     private let descriptionView = DetailedTextView()
-    private let button = Button()
-        .size(.medium)
     
     private let scrollView: UIScrollView = .init()
     private lazy var contentStackView: UIStackView = {
@@ -41,31 +39,8 @@ final class ExtractDetailView: UIView {
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
+        backgroundColor = Token.Color.white.uiColor
         setupConstraints()
-        configure(
-            usingViewModel: .init(
-                icon: .init(name: .arrowUp, color: .darkGray),
-                title: "Transferência enviada",
-                value: .init(title: "Valor", value: "R$ 154,00"),
-                date: .init(title: "Data", value: "Hoje - 12/10/2019"),
-                sender: .init(
-                    title: "De",
-                    value: "Banco iOS",
-                    description: "CPF...\nBanco Cora\nAgência 1234"
-                ),
-                recipient: .init(
-                    title: "De",
-                    value: "Banco iOS",
-                    description: "CPF...\nBanco Cora\nAgência 1234"
-                ),
-                description: .init(title: "Descrição", description: "um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir um text com muitas e muitas linhas que vai repitir"),
-                button: .init(
-                    type: .icon(.init(name: .arrowRight)),
-                    style: .secondary,
-                    text: "Compartilhar comprovante"
-                )
-            )
-        )
     }
     
     required init?(coder: NSCoder) {
@@ -73,7 +48,6 @@ final class ExtractDetailView: UIView {
     }
     
     func configure(usingViewModel viewModel: ExtractDetailView.ViewModel) {
-        backgroundColor = Token.Color.white.uiColor
         titleText.text = viewModel.title
         icon.configure(usingViewModel: viewModel.icon)
         valueView.configure(usingViewModel: viewModel.value)
@@ -81,7 +55,6 @@ final class ExtractDetailView: UIView {
         senderView.configure(usingViewModel: viewModel.sender)
         recipientView.configure(usingViewModel: viewModel.recipient)
         descriptionView.configure(usingViewModel: viewModel.description)
-        button.configure(usingViewModel: viewModel.button)
     }
 }
 
@@ -89,7 +62,6 @@ private extension ExtractDetailView {
     func setupConstraints() {
         setupScrollViewConstraints()
         setupContentStackViewConstraints()
-        setupButtonConstraints()
     }
     
     func setupScrollViewConstraints() {
@@ -109,14 +81,6 @@ private extension ExtractDetailView {
         contentStackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: Size.size08).isActive = true
         contentStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -Size.size20).isActive = true
     }
-    
-    func setupButtonConstraints() {
-        button.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(button)
-        button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Size.size06).isActive = true
-        button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.size06).isActive = true
-        button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Size.size06).isActive = true
-    }
 }
 
 extension ExtractDetailView {
@@ -128,7 +92,6 @@ extension ExtractDetailView {
         let sender: DetailedTextView.ViewModel
         let recipient: DetailedTextView.ViewModel
         let description: DetailedTextView.ViewModel
-        let button: Button.ViewModel
     }
 }
 

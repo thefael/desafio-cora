@@ -22,4 +22,11 @@ extension CoraEndpoint {
             path: "/challenge/list"
         )
     }
+    
+    public static func extractDetail(id: String) -> Self {
+        .init(
+            headers: ["Cache-Control": "no-cache"],
+            path: "/challenge/details/\(id)"
+        )
+    }
 }

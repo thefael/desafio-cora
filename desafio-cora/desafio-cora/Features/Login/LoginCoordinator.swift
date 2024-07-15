@@ -23,7 +23,7 @@ final class LoginCoordinator: LoginCoordinating {
     
     func openExtractScreen() {
         guard let navigationController else { return }
-        let vc = ExtractFactory.make()
+        let vc = ExtractFactory.make(navigationController)
         navigationController.pushViewController(vc, animated: true)
     }
 }

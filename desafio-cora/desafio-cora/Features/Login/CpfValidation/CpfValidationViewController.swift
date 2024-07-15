@@ -66,7 +66,7 @@ extension CpfValidationViewController: TextFieldDelegate {
         let sanitizedText = updatedText.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
         interactor.cpfToValidate = sanitizedText
         loginView.textField.showHint(false)
-        let formattedText = sanitizedText.applyCpfMask()
+        let formattedText = sanitizedText.applyMask(.cpf)
         textField.text = formattedText
         return false
     }
