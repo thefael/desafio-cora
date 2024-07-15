@@ -11,17 +11,20 @@ final class PasswordValidationInteractor: PasswordValidationInteracting {
     private let service: PasswordValidationServicing
     private let cpf: String
     private let repository: Repository
+    private let timeStamp: (() -> Date)?
     
     init(
         cpf: String,
         presenter: PasswordValidationPresenting,
         service: PasswordValidationServicing,
-        repository: Repository = DefaultRepository()
+        repository: Repository = DefaultRepository(),
+        timeStamp: (() -> Date)? = Date.init
     ) {
         self.cpf = cpf
         self.presenter = presenter
         self.service = service
         self.repository = repository
+        self.timeStamp = timeStamp
     }
     
     func loadScreen() {
@@ -32,7 +35,7 @@ final class PasswordValidationInteractor: PasswordValidationInteracting {
         Task { @MainActor in
             do {
                 var accessToken = try await service.authenticate(credential: .init(cpf: cpf, password: password))
-                accessToken.timeStamp = Date()
+                accessToken.timeStamp = timeStamp?()
                 repository.store(value: accessToken, forKey: .accessToken)
                 presenter.presentExtractScreen()
             } catch let error as ApiError {

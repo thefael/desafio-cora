@@ -48,12 +48,18 @@
 		A873AA812C4554DD005B1449 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A873AA802C4554DD005B1449 /* Localizable.strings */; };
 		A873AA832C456CB6005B1449 /* LoginLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA822C456CB6005B1449 /* LoginLocalizedStrings.swift */; };
 		A873AA852C457C80005B1449 /* ExtractDetailLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA842C457C80005B1449 /* ExtractDetailLocalizedStrings.swift */; };
+		A873AA912C45909C005B1449 /* CpfValidationPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA902C45909C005B1449 /* CpfValidationPresenterMock.swift */; };
+		A873AA932C459252005B1449 /* LoginCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA922C459252005B1449 /* LoginCoordinatorMock.swift */; };
+		A873AA952C459299005B1449 /* PasswordValidationPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA942C459299005B1449 /* PasswordValidationPresenterMock.swift */; };
+		A873AA972C4592B5005B1449 /* CpfValidationInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA962C4592B5005B1449 /* CpfValidationInteractorTests.swift */; };
+		A873AA992C45A4A6005B1449 /* PasswordValidationServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA982C45A4A6005B1449 /* PasswordValidationServiceMock.swift */; };
+		A873AA9C2C45A572005B1449 /* PasswordValidationInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA9B2C45A572005B1449 /* PasswordValidationInteractorTests.swift */; };
+		A873AA9E2C45ABCC005B1449 /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA9D2C45ABCC005B1449 /* RepositoryMock.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
 		A88FA0A92C39816C00EEE69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0A82C39816C00EEE69A /* Assets.xcassets */; };
 		A88FA0AC2C39816C00EEE69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88FA0AA2C39816C00EEE69A /* LaunchScreen.storyboard */; };
-		A88FA0B72C39816C00EEE69A /* desafio_coraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0B62C39816C00EEE69A /* desafio_coraTests.swift */; };
 		A88FA0C12C39816C00EEE69A /* desafio_coraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0C02C39816C00EEE69A /* desafio_coraUITests.swift */; };
 		A88FA0C32C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0C22C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift */; };
 		A88FA1062C39CCAF00EEE69A /* CoraNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */; };
@@ -147,6 +153,13 @@
 		A873AA802C4554DD005B1449 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A873AA822C456CB6005B1449 /* LoginLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLocalizedStrings.swift; sourceTree = "<group>"; };
 		A873AA842C457C80005B1449 /* ExtractDetailLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailLocalizedStrings.swift; sourceTree = "<group>"; };
+		A873AA902C45909C005B1449 /* CpfValidationPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidationPresenterMock.swift; sourceTree = "<group>"; };
+		A873AA922C459252005B1449 /* LoginCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorMock.swift; sourceTree = "<group>"; };
+		A873AA942C459299005B1449 /* PasswordValidationPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationPresenterMock.swift; sourceTree = "<group>"; };
+		A873AA962C4592B5005B1449 /* CpfValidationInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidationInteractorTests.swift; sourceTree = "<group>"; };
+		A873AA982C45A4A6005B1449 /* PasswordValidationServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationServiceMock.swift; sourceTree = "<group>"; };
+		A873AA9B2C45A572005B1449 /* PasswordValidationInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationInteractorTests.swift; sourceTree = "<group>"; };
+		A873AA9D2C45ABCC005B1449 /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +168,6 @@
 		A88FA0AB2C39816C00EEE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A88FA0AD2C39816C00EEE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "desafio-cora/AppConfiguration/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A88FA0B22C39816C00EEE69A /* desafio-coraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-coraTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A88FA0B62C39816C00EEE69A /* desafio_coraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraTests.swift; sourceTree = "<group>"; };
 		A88FA0BC2C39816C00EEE69A /* desafio-coraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-coraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA0C02C39816C00EEE69A /* desafio_coraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraUITests.swift; sourceTree = "<group>"; };
 		A88FA0C22C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -311,6 +323,52 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
+		A873AA8C2C458FF0005B1449 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A873AA8D2C458FF6005B1449 /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A873AA8D2C458FF6005B1449 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A873AA9A2C45A536005B1449 /* PasswordValidation */,
+				A873AA8F2C459001005B1449 /* Mocks */,
+				A873AA8E2C458FFB005B1449 /* CpfValidation */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A873AA8E2C458FFB005B1449 /* CpfValidation */ = {
+			isa = PBXGroup;
+			children = (
+				A873AA962C4592B5005B1449 /* CpfValidationInteractorTests.swift */,
+			);
+			path = CpfValidation;
+			sourceTree = "<group>";
+		};
+		A873AA8F2C459001005B1449 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A873AA902C45909C005B1449 /* CpfValidationPresenterMock.swift */,
+				A873AA922C459252005B1449 /* LoginCoordinatorMock.swift */,
+				A873AA942C459299005B1449 /* PasswordValidationPresenterMock.swift */,
+				A873AA982C45A4A6005B1449 /* PasswordValidationServiceMock.swift */,
+				A873AA9D2C45ABCC005B1449 /* RepositoryMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A873AA9A2C45A536005B1449 /* PasswordValidation */ = {
+			isa = PBXGroup;
+			children = (
+				A873AA9B2C45A572005B1449 /* PasswordValidationInteractorTests.swift */,
+			);
+			path = PasswordValidation;
+			sourceTree = "<group>";
+		};
 		A88FA0932C39816B00EEE69A = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +406,7 @@
 		A88FA0B52C39816C00EEE69A /* desafio-coraTests */ = {
 			isa = PBXGroup;
 			children = (
-				A88FA0B62C39816C00EEE69A /* desafio_coraTests.swift */,
+				A873AA8C2C458FF0005B1449 /* Features */,
 			);
 			path = "desafio-coraTests";
 			sourceTree = "<group>";
@@ -482,6 +540,7 @@
 					};
 					A88FA0B12C39816C00EEE69A = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = A88FA09B2C39816B00EEE69A;
 					};
 					A88FA0BB2C39816C00EEE69A = {
@@ -618,7 +677,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88FA0B72C39816C00EEE69A /* desafio_coraTests.swift in Sources */,
+				A873AA952C459299005B1449 /* PasswordValidationPresenterMock.swift in Sources */,
+				A873AA932C459252005B1449 /* LoginCoordinatorMock.swift in Sources */,
+				A873AA9C2C45A572005B1449 /* PasswordValidationInteractorTests.swift in Sources */,
+				A873AA912C45909C005B1449 /* CpfValidationPresenterMock.swift in Sources */,
+				A873AA9E2C45ABCC005B1449 /* RepositoryMock.swift in Sources */,
+				A873AA972C4592B5005B1449 /* CpfValidationInteractorTests.swift in Sources */,
+				A873AA992C45A4A6005B1449 /* PasswordValidationServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,6 +905,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY35DG58QL;
@@ -849,6 +915,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "thefael.desafio-coraTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafio-cora.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/desafio-cora";
@@ -860,6 +927,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CY35DG58QL;

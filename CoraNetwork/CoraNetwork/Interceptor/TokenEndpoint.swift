@@ -12,9 +12,14 @@ public struct TokenEndpoint: Endpoint {
     }
 }
 
-public struct AccessToken: Codable {
+public struct AccessToken: Codable, Equatable {
     public let token: String
     public var timeStamp: Date?
+    
+    public init(token: String, timeStamp: Date? = nil) {
+        self.token = token
+        self.timeStamp = timeStamp
+    }
 }
 
 public struct ExpiredToken: Codable {
