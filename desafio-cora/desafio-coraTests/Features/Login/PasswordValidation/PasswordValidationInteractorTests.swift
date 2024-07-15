@@ -83,12 +83,3 @@ extension PasswordValidationInteractorTests {
         return (doubles, interactor)
     }
 }
-
-extension AccessToken {
-    static func fixture(
-        token: String = "token",
-        timeStamp: Date? = nil
-    ) -> Self {
-        .init(token: token, timeStamp: timeStamp)
-    }
-}

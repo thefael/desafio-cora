@@ -26,6 +26,8 @@
 		A88FA10A2C3C0FBE00EEE69A /* ConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1092C3C0FBE00EEE69A /* ConfigLoader.swift */; };
 		A88FA1102C3C2A7000EEE69A /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA10F2C3C2A7000EEE69A /* StatusCode.swift */; };
 		A88FA1122C3C319000EEE69A /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1112C3C319000EEE69A /* ContentType.swift */; };
+		A8AC13B42C45CA1F00EA069C /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC13B32C45CA1F00EA069C /* RequestManagerTests.swift */; };
+		A8AC13B62C45CCB200EA069C /* InterceptorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC13B52C45CCB200EA069C /* InterceptorMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		A88FA1092C3C0FBE00EEE69A /* ConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoader.swift; sourceTree = "<group>"; };
 		A88FA10F2C3C2A7000EEE69A /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		A88FA1112C3C319000EEE69A /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		A8AC13B32C45CA1F00EA069C /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		A8AC13B52C45CCB200EA069C /* InterceptorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,18 +106,11 @@
 		A873AAA42C45B549005B1449 /* CoraNetworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				A873AAAE2C45B5CE005B1449 /* TokenInterceptorTests.swift */,
 				A873AAB02C45B5F3005B1449 /* Mocks */,
-				A873AAAD2C45B5B9005B1449 /* TokenInterceptorTests */,
+				A8AC13B32C45CA1F00EA069C /* RequestManagerTests.swift */,
 			);
 			path = CoraNetworkTests;
-			sourceTree = "<group>";
-		};
-		A873AAAD2C45B5B9005B1449 /* TokenInterceptorTests */ = {
-			isa = PBXGroup;
-			children = (
-				A873AAAE2C45B5CE005B1449 /* TokenInterceptorTests.swift */,
-			);
-			path = TokenInterceptorTests;
 			sourceTree = "<group>";
 		};
 		A873AAB02C45B5F3005B1449 /* Mocks */ = {
@@ -121,6 +118,7 @@
 			children = (
 				A873AAB12C45B5FE005B1449 /* RepositoryMock.swift */,
 				A873AAB82C45B766005B1449 /* InterceptedRequestManagerMock.swift */,
+				A8AC13B52C45CCB200EA069C /* InterceptorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -309,6 +307,8 @@
 				A873AAB92C45B766005B1449 /* InterceptedRequestManagerMock.swift in Sources */,
 				A873AAAF2C45B5CE005B1449 /* TokenInterceptorTests.swift in Sources */,
 				A873AAB22C45B5FE005B1449 /* RepositoryMock.swift in Sources */,
+				A8AC13B42C45CA1F00EA069C /* RequestManagerTests.swift in Sources */,
+				A8AC13B62C45CCB200EA069C /* InterceptorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

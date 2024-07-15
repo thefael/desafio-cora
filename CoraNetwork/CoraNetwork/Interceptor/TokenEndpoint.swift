@@ -25,3 +25,14 @@ public struct AccessToken: Codable, Equatable {
 public struct ExpiredToken: Codable {
     public let token: String
 }
+
+#if DEBUG
+public extension AccessToken {
+    static func fixture(
+        token: String = "token",
+        timeStamp: Date? = nil
+    ) -> Self {
+        .init(token: token, timeStamp: timeStamp)
+    }
+}
+#endif

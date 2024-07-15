@@ -67,16 +67,7 @@ extension TokenInterceptorTests {
     }
 }
 
-extension AccessToken {
-    static func fixture(
-        token: String = "token",
-        timeStamp: Date? = nil
-    ) -> Self {
-        .init(token: token, timeStamp: timeStamp)
-    }
-}
-
-struct EndpointMock: Endpoint {
+struct EndpointMock: Endpoint, Equatable {
     var queryItems: [URLQueryItem]? = nil
     var baseUrl: String = "baseUrl"
     var path: String = "path"
