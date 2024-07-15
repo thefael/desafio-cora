@@ -2,15 +2,18 @@ import CoraDesignSystem
 import UIKit
 
 protocol ExtractDetailPresenting {
-    func present(detail: ExtractDetail)
+    func present(detail: ExtractDetail, entry: ExtractList.Section.Item.Entry)
 }
 
 final class ExtractDetailPresenter: ExtractDetailPresenting {
     weak var display: ExtractDetailDisplay?
     
-    func present(detail: ExtractDetail) {
+    func present(
+        detail: ExtractDetail,
+        entry: ExtractList.Section.Item.Entry
+    ) {
         let viewModel: ExtractDetailView.ViewModel = .init(
-            icon: .init(name: .arrowRight, color: .darkGray),
+            icon: makeIcon(entry),
             title: detail.label,
             value: .init(
                 title: ExtractDetailLocalizedStrings.valueTitle.localized,
@@ -40,6 +43,15 @@ final class ExtractDetailPresenter: ExtractDetailPresenting {
             )
         )
         display?.display(viewModel: viewModel)
+    }
+    
+    func makeIcon(_ entry: ExtractList.Section.Item.Entry) -> Icon.ViewModel {
+        switch entry {
+        case .debit:
+            return .init(name: .arrowUp, color: .darkGray)
+        case .credit:
+            return .init(name: .arrowDown, color: .darkGray)
+        }
     }
     
     func makeCurrencyValue(_ value: Int) -> String {
