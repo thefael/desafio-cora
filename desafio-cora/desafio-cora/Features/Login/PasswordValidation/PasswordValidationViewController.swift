@@ -3,6 +3,7 @@ import UIKit
 
 protocol PasswordValidationDisplay: AnyObject {
     func display(viewModel: LoginView.ViewModel)
+    func displayAlert(title: String, message: String)
 }
 
 final class PasswordValidationViewController: UIViewController {
@@ -49,6 +50,12 @@ extension PasswordValidationViewController: PasswordValidationDisplay {
             guard let password = self?.loginView.textField.textField.text else { return }
             self?.interactor.login(password: password)
         }
+    }
+    
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(.init(title: "Ok", style: .cancel))
+        present(alert, animated: true)
     }
 }
 
