@@ -9,6 +9,9 @@
 "cpfTextFieldTitle" = "Qual seu CPF?";
 "passwordTextFieldTitle" = "Digite sua senha de acesso";
 "loginButtonText" = "Próximo";
+"loginErrorTitle" = "Algo deu errado";
+"unauthorizedErrorMessage" = "Suas credenciais estão incorretas.";
+"genericErrorMessage" = "Não foi possível realizar essa operação.";
 
 // ExtractDetail
 "agency" = "Agência %@-%@";

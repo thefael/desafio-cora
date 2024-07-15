@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol Interceptor {
-    func intercept(endpoint: Endpoint) async -> Endpoint
+    func intercept(endpoint: Endpoint) async throws -> Endpoint
 }
 
 public class RequestManager {
@@ -27,14 +27,14 @@ public class RequestManager {
     }
     
     public func execute<T: Decodable>(endpoint: Endpoint) async throws -> T {
-        let endpoint: Endpoint = await intercept(endpoint)
+        let endpoint: Endpoint = try await intercept(endpoint)
         return try await request(fromEndpoint: endpoint)
     }
     
-    func intercept(_ endpoint: Endpoint) async -> Endpoint {
+    func intercept(_ endpoint: Endpoint) async throws -> Endpoint {
         var endpoint = endpoint
-        endpoint = await interceptors.reduce(endpoint) { endpoint, interceptor in
-            return await interceptor.intercept(endpoint: endpoint)
+        endpoint = try await interceptors.reduce(endpoint) { endpoint, interceptor in
+            return try await interceptor.intercept(endpoint: endpoint)
         }
         return endpoint
     }

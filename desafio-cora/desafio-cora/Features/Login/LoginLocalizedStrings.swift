@@ -5,6 +5,9 @@ enum LoginLocalizedStrings: String {
     case cpfTextFieldTitle
     case passwordTextFieldTitle
     case loginButtonText
+    case loginErrorTitle
+    case unauthorizedErrorMessage
+    case genericErrorMessage
 }
 
 

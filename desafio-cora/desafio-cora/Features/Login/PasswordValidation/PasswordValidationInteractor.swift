@@ -35,8 +35,16 @@ final class PasswordValidationInteractor: PasswordValidationInteracting {
                 accessToken.timeStamp = Date()
                 repository.store(value: accessToken, forKey: .accessToken)
                 presenter.presentExtractScreen()
-            } catch {
-                print(error)
+            } catch let error as ApiError {
+                let title = LoginLocalizedStrings.loginErrorTitle.localized
+                let message: String
+                switch error {
+                case .unauthorized:
+                    message = LoginLocalizedStrings.unauthorizedErrorMessage.localized
+                default:
+                    message = LoginLocalizedStrings.genericErrorMessage.localized
+                }
+                presenter.presentAlert(errorTitle: title, errorMessage: message)
             }
         }
     }
