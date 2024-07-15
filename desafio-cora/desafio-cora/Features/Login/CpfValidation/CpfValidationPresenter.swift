@@ -25,6 +25,6 @@ extension CpfValidationPresenter: CpfValidationPresenting {
     }
     
     func presentHint() {
-        display?.display(hint: LoginLocalizedStrings.loginButtonText.localized)
+        display?.display(hint: LoginLocalizedStrings.cpfHintText.localized)
     }
 }
