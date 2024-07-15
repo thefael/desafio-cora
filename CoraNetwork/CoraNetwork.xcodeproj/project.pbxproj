@@ -12,6 +12,11 @@
 		A8387EB62C441A6C00663E4B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB52C441A6C00663E4B /* Date.swift */; };
 		A8387EB82C441AAD00663E4B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB72C441AAD00663E4B /* Repository.swift */; };
 		A8387EBA2C441EA100663E4B /* TokenEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8387EB92C441EA100663E4B /* TokenEndpoint.swift */; };
+		A873AAA72C45B549005B1449 /* CoraNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA0DD2C3992CF00EEE69A /* CoraNetwork.framework */; platformFilter = ios; };
+		A873AAAF2C45B5CE005B1449 /* TokenInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AAAE2C45B5CE005B1449 /* TokenInterceptorTests.swift */; };
+		A873AAB22C45B5FE005B1449 /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AAB12C45B5FE005B1449 /* RepositoryMock.swift */; };
+		A873AAB92C45B766005B1449 /* InterceptedRequestManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AAB82C45B766005B1449 /* InterceptedRequestManagerMock.swift */; };
+		A873AABB2C45B897005B1449 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AABA2C45B897005B1449 /* Interceptor.swift */; };
 		A88FA0E12C3992CF00EEE69A /* CoraNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = A88FA0E02C3992CF00EEE69A /* CoraNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A88FA0E82C39935700EEE69A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0E72C39935700EEE69A /* Endpoint.swift */; };
 		A88FA0EB2C39941100EEE69A /* HttpHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0EA2C39941100EEE69A /* HttpHeaderField.swift */; };
@@ -23,12 +28,27 @@
 		A88FA1122C3C319000EEE69A /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA1112C3C319000EEE69A /* ContentType.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A873AAA82C45B549005B1449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88FA0D42C3992CF00EEE69A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A88FA0DC2C3992CF00EEE69A;
+			remoteInfo = CoraNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A8387EB02C4330E500663E4B /* TokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInterceptor.swift; sourceTree = "<group>"; };
 		A8387EB32C441A4E00663E4B /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		A8387EB52C441A6C00663E4B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		A8387EB72C441AAD00663E4B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A8387EB92C441EA100663E4B /* TokenEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEndpoint.swift; sourceTree = "<group>"; };
+		A873AAA32C45B549005B1449 /* CoraNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoraNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A873AAAE2C45B5CE005B1449 /* TokenInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInterceptorTests.swift; sourceTree = "<group>"; };
+		A873AAB12C45B5FE005B1449 /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
+		A873AAB82C45B766005B1449 /* InterceptedRequestManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptedRequestManagerMock.swift; sourceTree = "<group>"; };
+		A873AABA2C45B897005B1449 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		A88FA0DD2C3992CF00EEE69A /* CoraNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoraNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA0E02C3992CF00EEE69A /* CoraNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoraNetwork.h; sourceTree = "<group>"; };
 		A88FA0E72C39935700EEE69A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -42,6 +62,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A873AAA02C45B549005B1449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A873AAA72C45B549005B1449 /* CoraNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A88FA0DA2C3992CF00EEE69A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,6 +85,7 @@
 			children = (
 				A8387EB02C4330E500663E4B /* TokenInterceptor.swift */,
 				A8387EB92C441EA100663E4B /* TokenEndpoint.swift */,
+				A873AABA2C45B897005B1449 /* Interceptor.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -70,10 +99,37 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A873AAA42C45B549005B1449 /* CoraNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				A873AAB02C45B5F3005B1449 /* Mocks */,
+				A873AAAD2C45B5B9005B1449 /* TokenInterceptorTests */,
+			);
+			path = CoraNetworkTests;
+			sourceTree = "<group>";
+		};
+		A873AAAD2C45B5B9005B1449 /* TokenInterceptorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A873AAAE2C45B5CE005B1449 /* TokenInterceptorTests.swift */,
+			);
+			path = TokenInterceptorTests;
+			sourceTree = "<group>";
+		};
+		A873AAB02C45B5F3005B1449 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A873AAB12C45B5FE005B1449 /* RepositoryMock.swift */,
+				A873AAB82C45B766005B1449 /* InterceptedRequestManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		A88FA0D32C3992CF00EEE69A = {
 			isa = PBXGroup;
 			children = (
 				A88FA0DF2C3992CF00EEE69A /* CoraNetwork */,
+				A873AAA42C45B549005B1449 /* CoraNetworkTests */,
 				A88FA0DE2C3992CF00EEE69A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A88FA0DD2C3992CF00EEE69A /* CoraNetwork.framework */,
+				A873AAA32C45B549005B1449 /* CoraNetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +208,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A873AAA22C45B549005B1449 /* CoraNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A873AAAC2C45B549005B1449 /* Build configuration list for PBXNativeTarget "CoraNetworkTests" */;
+			buildPhases = (
+				A873AA9F2C45B549005B1449 /* Sources */,
+				A873AAA02C45B549005B1449 /* Frameworks */,
+				A873AAA12C45B549005B1449 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A873AAA92C45B549005B1449 /* PBXTargetDependency */,
+			);
+			name = CoraNetworkTests;
+			productName = CoraNetworkTests;
+			productReference = A873AAA32C45B549005B1449 /* CoraNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A88FA0DC2C3992CF00EEE69A /* CoraNetwork */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A88FA0E42C3992CF00EEE69A /* Build configuration list for PBXNativeTarget "CoraNetwork" */;
@@ -176,8 +251,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					A873AAA22C45B549005B1449 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
 					A88FA0DC2C3992CF00EEE69A = {
 						CreatedOnToolsVersion = 15.2;
 						LastSwiftMigration = 1520;
@@ -199,11 +279,19 @@
 			projectRoot = "";
 			targets = (
 				A88FA0DC2C3992CF00EEE69A /* CoraNetwork */,
+				A873AAA22C45B549005B1449 /* CoraNetworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A873AAA12C45B549005B1449 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A88FA0DB2C3992CF00EEE69A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +302,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A873AA9F2C45B549005B1449 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A873AAB92C45B766005B1449 /* InterceptedRequestManagerMock.swift in Sources */,
+				A873AAAF2C45B5CE005B1449 /* TokenInterceptorTests.swift in Sources */,
+				A873AAB22C45B5FE005B1449 /* RepositoryMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A88FA0D92C3992CF00EEE69A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +319,7 @@
 				A88FA0E82C39935700EEE69A /* Endpoint.swift in Sources */,
 				A8387EB42C441A4E00663E4B /* Array.swift in Sources */,
 				A8387EB12C4330E500663E4B /* TokenInterceptor.swift in Sources */,
+				A873AABB2C45B897005B1449 /* Interceptor.swift in Sources */,
 				A88FA0F82C39B96F00EEE69A /* RequestManager.swift in Sources */,
 				A88FA0F22C39ACF800EEE69A /* ConfigKey.swift in Sources */,
 				A88FA0F52C39B60200EEE69A /* Credential.swift in Sources */,
@@ -236,7 +335,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A873AAA92C45B549005B1449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = A88FA0DC2C3992CF00EEE69A /* CoraNetwork */;
+			targetProxy = A873AAA82C45B549005B1449 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A873AAAA2C45B549005B1449 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY35DG58QL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = thefael.CoraNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A873AAAB2C45B549005B1449 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY35DG58QL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = thefael.CoraNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A88FA0E22C3992CF00EEE69A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -442,6 +587,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A873AAAC2C45B549005B1449 /* Build configuration list for PBXNativeTarget "CoraNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A873AAAA2C45B549005B1449 /* Debug */,
+				A873AAAB2C45B549005B1449 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A88FA0D72C3992CF00EEE69A /* Build configuration list for PBXProject "CoraNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

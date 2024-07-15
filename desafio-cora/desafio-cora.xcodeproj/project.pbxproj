@@ -54,7 +54,7 @@
 		A873AA972C4592B5005B1449 /* CpfValidationInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA962C4592B5005B1449 /* CpfValidationInteractorTests.swift */; };
 		A873AA992C45A4A6005B1449 /* PasswordValidationServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA982C45A4A6005B1449 /* PasswordValidationServiceMock.swift */; };
 		A873AA9C2C45A572005B1449 /* PasswordValidationInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA9B2C45A572005B1449 /* PasswordValidationInteractorTests.swift */; };
-		A873AA9E2C45ABCC005B1449 /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AA9D2C45ABCC005B1449 /* RepositoryMock.swift */; };
+		A873AAB72C45B685005B1449 /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873AAB62C45B685005B1449 /* RepositoryMock.swift */; };
 		A88FA0A02C39816B00EEE69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA09F2C39816B00EEE69A /* AppDelegate.swift */; };
 		A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */; };
 		A88FA0A42C39816B00EEE69A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0A32C39816B00EEE69A /* WelcomeViewController.swift */; };
@@ -67,6 +67,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A873AAB42C45B622005B1449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A873AAA32C45B549005B1449;
+			remoteInfo = CoraNetworkTests;
+		};
 		A88FA0B32C39816C00EEE69A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A88FA0942C39816B00EEE69A /* Project object */;
@@ -159,7 +166,7 @@
 		A873AA962C4592B5005B1449 /* CpfValidationInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidationInteractorTests.swift; sourceTree = "<group>"; };
 		A873AA982C45A4A6005B1449 /* PasswordValidationServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationServiceMock.swift; sourceTree = "<group>"; };
 		A873AA9B2C45A572005B1449 /* PasswordValidationInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationInteractorTests.swift; sourceTree = "<group>"; };
-		A873AA9D2C45ABCC005B1449 /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
+		A873AAB62C45B685005B1449 /* RepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
 		A88FA09C2C39816B00EEE69A /* desafio-cora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-cora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FA09F2C39816B00EEE69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A88FA0A12C39816B00EEE69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -352,11 +359,11 @@
 		A873AA8F2C459001005B1449 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				A873AAB62C45B685005B1449 /* RepositoryMock.swift */,
 				A873AA902C45909C005B1449 /* CpfValidationPresenterMock.swift */,
 				A873AA922C459252005B1449 /* LoginCoordinatorMock.swift */,
 				A873AA942C459299005B1449 /* PasswordValidationPresenterMock.swift */,
 				A873AA982C45A4A6005B1449 /* PasswordValidationServiceMock.swift */,
-				A873AA9D2C45ABCC005B1449 /* RepositoryMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -424,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */,
+				A873AAB52C45B622005B1449 /* CoraNetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -581,6 +589,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		A873AAB52C45B622005B1449 /* CoraNetworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoraNetworkTests.xctest;
+			remoteRef = A873AAB42C45B622005B1449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -681,7 +696,7 @@
 				A873AA932C459252005B1449 /* LoginCoordinatorMock.swift in Sources */,
 				A873AA9C2C45A572005B1449 /* PasswordValidationInteractorTests.swift in Sources */,
 				A873AA912C45909C005B1449 /* CpfValidationPresenterMock.swift in Sources */,
-				A873AA9E2C45ABCC005B1449 /* RepositoryMock.swift in Sources */,
+				A873AAB72C45B685005B1449 /* RepositoryMock.swift in Sources */,
 				A873AA972C4592B5005B1449 /* CpfValidationInteractorTests.swift in Sources */,
 				A873AA992C45A4A6005B1449 /* PasswordValidationServiceMock.swift in Sources */,
 			);
