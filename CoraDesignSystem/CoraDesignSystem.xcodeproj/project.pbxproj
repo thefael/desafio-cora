@@ -156,11 +156,12 @@
 			};
 			buildConfigurationList = A88FA1182C3C351700EEE69A /* Build configuration list for PBXProject "CoraDesignSystem" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = A88FA1142C3C351700EEE69A;
 			productRefGroup = A88FA11F2C3C351700EEE69A /* Products */;

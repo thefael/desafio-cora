@@ -1,0 +1,20 @@
+// Welcome
+"title" = "Conta Digital PJ";
+"subtitle" = "Poderosamente Simples";
+"description" = "Sua empresa livre burocracias e de taxas para gerar boletos, fazer transferências e pagamentos.";
+"welcomeButtonText" = "Entrar";
+
+// Login
+"cpfHintText" = "Digite um CPF válido.";
+"cpfTextFieldTitle" = "Qual seu CPF?";
+"passwordTextFieldTitle" = "Digite sua senha de acesso";
+"loginButtonText" = "Próximo";
+
+// ExtractDetail
+"agency" = "Agência %@-%@";
+"account" = "Conta %@-%@";
+"valueTitle" = "Valor";
+"dateTitle" = "Data";
+"senderTitle" = "De";
+"recipientTitle" = "Para";
+"descriptionTitle" = "Descrição";

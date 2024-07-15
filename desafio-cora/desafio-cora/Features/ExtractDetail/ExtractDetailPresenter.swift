@@ -13,11 +13,11 @@ final class ExtractDetailPresenter: ExtractDetailPresenting {
             icon: .init(name: .arrowRight, color: .darkGray),
             title: detail.label,
             value: .init(
-                title: "Valor",
+                title: ExtractDetailLocalizedStrings.valueTitle.localized,
                 value: Currency.brl.rawValue + " " + makeCurrencyValue(detail.amount)
             ),
             date: .init(
-                title: "Data",
+                title: ExtractDetailLocalizedStrings.dateTitle.localized,
                 value: makeFormattedDate(
                     detail.dateEvent,
                     fromFormat: .full,
@@ -25,17 +25,17 @@ final class ExtractDetailPresenter: ExtractDetailPresenting {
                 )
             ),
             sender: .init(
-                title: "De",
+                title: ExtractDetailLocalizedStrings.senderTitle.localized,
                 value: detail.sender.name,
                 description: makeDescription(detail)
             ),
             recipient: .init(
-                title: "Para",
+                title: ExtractDetailLocalizedStrings.recipientTitle.localized,
                 value: detail.recipient.name,
                 description: makeDescription(detail)
             ),
             description: .init(
-                title: "Descrição",
+                title: ExtractDetailLocalizedStrings.descriptionTitle.localized,
                 description: detail.description
             )
         )
@@ -62,16 +62,16 @@ final class ExtractDetailPresenter: ExtractDetailPresenting {
     func makeDocument(_ accountDetail: ExtractDetail.AccountDetail) -> String {
         switch accountDetail.documentType {
         case .cpf:
-            return "CPF" + " " + accountDetail.documentNumber.applyMask(.cpf)
+            return accountDetail.documentType.rawValue + " " + accountDetail.documentNumber.applyMask(.cpf)
         case .cnpj:
-            return "CNPJ" + " " + accountDetail.documentNumber.applyMask(.cnpj)
+            return accountDetail.documentType.rawValue + " " + accountDetail.documentNumber.applyMask(.cnpj)
         }
     }
     
     func makeAgencyAndAccount(_ accountDetail: ExtractDetail.AccountDetail) -> String {
         let x = accountDetail
-        let agency = "Agência " + x.agencyNumber + "-" + x.agencyNumberDigit
-        let account = "Conta " + x.accountNumber + "-" + x.accountNumberDigit
+        let agency = String(format: ExtractDetailLocalizedStrings.agency.localized, x.agencyNumber, x.agencyNumberDigit)
+        let account = String(format: ExtractDetailLocalizedStrings.account.localized, x.accountNumber, x.accountNumberDigit)
         return  agency + " - " + account
     }
     
