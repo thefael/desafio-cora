@@ -64,6 +64,8 @@
 		A88FA0C32C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88FA0C22C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift */; };
 		A88FA1062C39CCAF00EEE69A /* CoraNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */; };
 		A88FA1072C39CCAF00EEE69A /* CoraNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A88FA1042C39CC6B00EEE69A /* CoraNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A8AC13BC2C45F38D00EA069C /* ExtractLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC13BB2C45F38D00EA069C /* ExtractLocalizedStrings.swift */; };
+		A8AC13C12C45F8FE00EA069C /* ExtractDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC13C02C45F8FE00EA069C /* ExtractDetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,8 @@
 		A88FA0C22C39816C00EEE69A /* desafio_coraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_coraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A88FA0FF2C39CC6B00EEE69A /* CoraNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoraNetwork.xcodeproj; path = ../../CoraNetwork/CoraNetwork.xcodeproj; sourceTree = "<group>"; };
 		A88FA12C2C3C368900EEE69A /* CoraDesignSystem.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoraDesignSystem.xcodeproj; path = ../../CoraDesignSystem/CoraDesignSystem.xcodeproj; sourceTree = "<group>"; };
+		A8AC13BB2C45F38D00EA069C /* ExtractLocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractLocalizedStrings.swift; sourceTree = "<group>"; };
+		A8AC13C02C45F8FE00EA069C /* ExtractDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +277,7 @@
 				A8387EA42C4312F000663E4B /* ExtractService.swift */,
 				A8387EA62C43197D00663E4B /* ExtractFactory.swift */,
 				A873AA5F2C44B1B7005B1449 /* ExtractCoordinator.swift */,
+				A8AC13BB2C45F38D00EA069C /* ExtractLocalizedStrings.swift */,
 			);
 			path = Extract;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				A873AA612C44B2BE005B1449 /* ExtractDetailFactory.swift */,
 				A873AA642C44B358005B1449 /* ExtractDetailPresenter.swift */,
 				A873AA842C457C80005B1449 /* ExtractDetailLocalizedStrings.swift */,
+				A8AC13C02C45F8FE00EA069C /* ExtractDetailCoordinator.swift */,
 			);
 			path = ExtractDetail;
 			sourceTree = "<group>";
@@ -670,6 +676,7 @@
 				A8387E672C420EE100663E4B /* LoginCoordinator.swift in Sources */,
 				A8387E6A2C42C76E00663E4B /* CpfValidationViewController.swift in Sources */,
 				A8387E982C43004900663E4B /* ExtractCell.swift in Sources */,
+				A8AC13BC2C45F38D00EA069C /* ExtractLocalizedStrings.swift in Sources */,
 				A81DD98F2C3DFE8E00848437 /* WelcomeCoordinator.swift in Sources */,
 				A8387E862C42F97200663E4B /* PasswordValidationService.swift in Sources */,
 				A88FA0A22C39816B00EEE69A /* SceneDelegate.swift in Sources */,
@@ -678,6 +685,7 @@
 				A8387EAA2C431ABA00663E4B /* GenericTableViewDataSource.swift in Sources */,
 				A8387E6E2C42C83400663E4B /* CpfValidationPresenter.swift in Sources */,
 				A873AA852C457C80005B1449 /* ExtractDetailLocalizedStrings.swift in Sources */,
+				A8AC13C12C45F8FE00EA069C /* ExtractDetailCoordinator.swift in Sources */,
 				A873AA602C44B1B7005B1449 /* ExtractCoordinator.swift in Sources */,
 				A873AA7A2C4551EE005B1449 /* Localizable.swift in Sources */,
 				A8387EAC2C4320BA00663E4B /* ExtractPresenter.swift in Sources */,

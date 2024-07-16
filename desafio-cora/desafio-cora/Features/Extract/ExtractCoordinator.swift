@@ -3,6 +3,7 @@ import UIKit
 
 protocol ExtractCoordinating {
     func openDetailScreen(forId id: String, entry: ExtractList.Section.Item.Entry)
+    func navigateToRoot()
 }
 
 final class ExtractCoordinator: ExtractCoordinating {
@@ -15,5 +16,9 @@ final class ExtractCoordinator: ExtractCoordinating {
     func openDetailScreen(forId id: String, entry: ExtractList.Section.Item.Entry) {
         let viewController = ExtractDetailFactory.make(navigationController: navigationController, id: id, entry: entry)
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func navigateToRoot() {
+        navigationController.popToRootViewController(animated: true)
     }
 }

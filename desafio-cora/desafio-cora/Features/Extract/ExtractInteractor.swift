@@ -1,8 +1,10 @@
 import Foundation
+import CoraNetwork
 
 protocol ExtractInteracting {
     func loadData()
     func didTapCell(atIndexPath indexPath: IndexPath)
+    func didTapAlertButton()
 }
 
 final class ExtractInteractor: ExtractInteracting {
@@ -21,8 +23,22 @@ final class ExtractInteractor: ExtractInteracting {
                 let list = try await service.getList()
                 self.list = list
                 presenter.present(list: list)
-            } catch {
-                print(error)
+            } catch let error as ApiError {
+                switch error {
+                case .unauthorized:
+                    presenter.presentAlert(
+                        errorTitle: ExtractLocalizedStrings.unauthorizedErrorTitle.localized,
+                        errorMessage: ExtractLocalizedStrings.unauthorizedErrorMessage.localized,
+                        buttonCaption: ExtractLocalizedStrings.buttonCaption.localized
+                    )
+                default:
+                    presenter.presentAlert(
+                        errorTitle: ExtractLocalizedStrings.genericErrorTitle.localized,
+                        errorMessage:
+                            ExtractLocalizedStrings.genericErrorMessage.localized,
+                        buttonCaption: ExtractLocalizedStrings.buttonCaption.localized
+                    )
+                }
             }
         }
     }
@@ -30,5 +46,9 @@ final class ExtractInteractor: ExtractInteracting {
     func didTapCell(atIndexPath indexPath: IndexPath) {
         guard let list, let item = list.results[safe: indexPath.section]?.items[safe: indexPath.row] else { return }
         presenter.presentDetail(itemId: item.id, entry: item.entry)
+    }
+    
+    func didTapAlertButton() {
+        presenter.presentRoot()
     }
 }

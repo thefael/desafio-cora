@@ -21,3 +21,11 @@
 "senderTitle" = "De";
 "recipientTitle" = "Para";
 "descriptionTitle" = "Descrição";
+
+// Extract
+"unauthorizedErrorTitle" = "Sua sessão expirou";
+"unauthorizedErrorMessage" = "Faça login novamente para continuar.";
+"genericErrorTitle" = "Algo deu errado";
+"genericErrorMessage" = "Não foi possível realizar essa operação.";
+"buttonCaption" = "Finalizar sessão";
+"back" = "Voltar";

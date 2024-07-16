@@ -1,23 +1,15 @@
 import Foundation
 
-enum ExtractDetailLocalizedStrings: String {
-    case agency
-    case account
-    case valueTitle
-    case dateTitle
-    case senderTitle
-    case recipientTitle
-    case descriptionTitle
+enum ExtractLocalizedStrings: String {
     case unauthorizedErrorTitle
     case unauthorizedErrorMessage
     case genericErrorTitle
     case genericErrorMessage
     case buttonCaption
-    case back
 }
 
 
-extension ExtractDetailLocalizedStrings: Localizable {
+extension ExtractLocalizedStrings: Localizable {
     var bundle: Bundle { Bundle.main }
     var stringName: String { rawValue }
     var stringFileName: String? { "Localizable" }

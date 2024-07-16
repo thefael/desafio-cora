@@ -1,7 +1,9 @@
 import Foundation
+import CoraNetwork
 
 protocol ExtractDetailInteracting {
     func loadData()
+    func didTapAlertButton(type: AlertType)
 }
 
 final class ExtractDetailInteractor: ExtractDetailInteracting {
@@ -27,9 +29,38 @@ final class ExtractDetailInteractor: ExtractDetailInteracting {
             do {
                 let detail = try await service.getDetail(usingId: id)
                 presenter.present(detail: detail, entry: entry)
-            } catch {
-                print(error)
+            } catch let error as ApiError {
+                switch error {
+                case .unauthorized:
+                    presenter.presentAlert(
+                        type: .logout,
+                        errorTitle: ExtractDetailLocalizedStrings.unauthorizedErrorTitle.localized,
+                        errorMessage: ExtractDetailLocalizedStrings.unauthorizedErrorMessage.localized,
+                        buttonCaption: ExtractDetailLocalizedStrings.buttonCaption.localized
+                    )
+                default:
+                    presenter.presentAlert(
+                        type: .dismiss,
+                        errorTitle: ExtractDetailLocalizedStrings.genericErrorTitle.localized,
+                        errorMessage: ExtractDetailLocalizedStrings.genericErrorMessage.localized,
+                        buttonCaption: ExtractDetailLocalizedStrings.back.localized
+                    )
+                }
             }
         }
     }
+    
+    func didTapAlertButton(type: AlertType) {
+        switch type {
+        case .logout:
+            presenter.presentRoot()
+        case .dismiss:
+            presenter.dismiss()
+        }
+    }
+}
+
+enum AlertType {
+    case logout
+    case dismiss
 }

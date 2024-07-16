@@ -3,6 +3,7 @@ import UIKit
 
 protocol ExtractDetailDisplay: AnyObject {
     func display(viewModel: ExtractDetailView.ViewModel)
+    func displayAlert(type: AlertType, title: String, message: String, buttonCaption: String)
 }
 
 final class ExtractDetailViewController: UIViewController {
@@ -31,5 +32,14 @@ final class ExtractDetailViewController: UIViewController {
 extension ExtractDetailViewController: ExtractDetailDisplay {
     func display(viewModel: ExtractDetailView.ViewModel) {
         extractDetailView.configure(usingViewModel: viewModel)
+    }
+    
+    func displayAlert(type: AlertType, title: String, message: String, buttonCaption: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action: UIAlertAction = .init(title: buttonCaption, style: .default) { [weak self] _ in
+            self?.interactor.didTapAlertButton(type: type)
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
