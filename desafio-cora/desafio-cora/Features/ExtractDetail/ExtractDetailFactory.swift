@@ -3,7 +3,8 @@ import UIKit
 enum ExtractDetailFactory {
     static func make(navigationController: UINavigationController, id: String, entry: ExtractList.Section.Item.Entry) -> UIViewController {
         let service = ExtractDetailService()
-        let presenter = ExtractDetailPresenter()
+        let coordinator = ExtractDetailCoordinator(navigationController: navigationController)
+        let presenter = ExtractDetailPresenter(coordinator: coordinator)
         let interactor = ExtractDetailInteractor(
             service: service,
             presenter: presenter,

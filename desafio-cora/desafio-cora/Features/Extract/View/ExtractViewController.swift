@@ -3,6 +3,7 @@ import UIKit
 
 protocol ExtractDisplay: AnyObject {
     func display(sections: [ExtractView.ViewModel.Section])
+    func displayAlert(title: String, message: String, buttonCaption: String)
 }
 
 final class ExtractViewController: UIViewController {
@@ -62,5 +63,14 @@ extension ExtractViewController: ExtractDisplay {
             self.extractView.tableView.reloadData()
             self.refreshControl.endRefreshing()
         }
+    }
+    
+    func displayAlert(title: String, message: String, buttonCaption: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action: UIAlertAction = .init(title: buttonCaption, style: .default) { [weak self] _ in
+            self?.interactor.didTapAlertButton()
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }

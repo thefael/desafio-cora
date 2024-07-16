@@ -3,10 +3,18 @@ import UIKit
 
 protocol ExtractDetailPresenting {
     func present(detail: ExtractDetail, entry: ExtractList.Section.Item.Entry)
+    func presentAlert(type: AlertType, errorTitle: String, errorMessage: String, buttonCaption: String)
+    func dismiss()
+    func presentRoot()
 }
 
 final class ExtractDetailPresenter: ExtractDetailPresenting {
+    private let coordinator: ExtractDetailCoordinating
     weak var display: ExtractDetailDisplay?
+    
+    init(coordinator: ExtractDetailCoordinating) {
+        self.coordinator = coordinator
+    }
     
     func present(
         detail: ExtractDetail,
@@ -45,6 +53,20 @@ final class ExtractDetailPresenter: ExtractDetailPresenting {
         display?.display(viewModel: viewModel)
     }
     
+    func presentAlert(type: AlertType, errorTitle: String, errorMessage: String, buttonCaption: String) {
+        display?.displayAlert(type: type, title: errorTitle, message: errorMessage, buttonCaption: buttonCaption)
+    }
+    
+    func dismiss() {
+        coordinator.dismiss()
+    }
+    
+    func presentRoot() {
+        coordinator.navigateToRoot()
+    }
+}
+
+private extension ExtractDetailPresenter {
     func makeIcon(_ entry: ExtractList.Section.Item.Entry) -> Icon.ViewModel {
         switch entry {
         case .debit:

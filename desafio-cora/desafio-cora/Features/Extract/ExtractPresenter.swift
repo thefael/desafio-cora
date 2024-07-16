@@ -4,6 +4,8 @@ import UIKit
 protocol ExtractPresenting {
     func present(list: ExtractList)
     func presentDetail(itemId: String, entry: ExtractList.Section.Item.Entry)
+    func presentAlert(errorTitle: String, errorMessage: String, buttonCaption: String)
+    func presentRoot()
 }
 
 final class ExtractPresenter: ExtractPresenting {
@@ -45,10 +47,17 @@ final class ExtractPresenter: ExtractPresenting {
     func presentDetail(itemId: String, entry: ExtractList.Section.Item.Entry) {
         coordinator.openDetailScreen(forId: itemId, entry: entry)
     }
+    
+    func presentAlert(errorTitle: String, errorMessage: String, buttonCaption: String) {
+        display?.displayAlert(title: errorTitle, message: errorMessage, buttonCaption: buttonCaption)
+    }
+    
+    func presentRoot() {
+        coordinator.navigateToRoot()
+    }
 }
 
 private extension ExtractPresenter {
-    
     func makeColorScheme(_ type: ExtractList.Section.Item.Entry) -> ExtractCell.ViewModel.ColorScheme {
         switch type {
         case .credit:
